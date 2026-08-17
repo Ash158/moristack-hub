@@ -31,6 +31,10 @@
 }
 
 @theme inline {
+  /* Re-declare default Tailwind colors so they keep working with @theme inline */
+  --color-white: #ffffff;
+  --color-black: #000000;
+
   --color-bg: var(--background);
   --color-fg: var(--foreground);
   --color-fg-soft: var(--muted);
