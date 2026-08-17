@@ -5,25 +5,25 @@ export function About({ locale }: { locale: Locale }) {
   const c = getContent(locale);
 
   return (
-    <section id="about" className="border-y border-border bg-card">
-      <div className="mx-auto grid max-w-[1000px] gap-10 px-6 py-18 sm:py-20 md:grid-cols-[0.9fr_1.1fr]">
+    <section id="about" className="bg-card px-6 py-16 sm:py-20">
+      <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-2 lg:items-start">
         <div>
-          <p className="text-[12.5px] font-bold tracking-[0.06em] text-fg-soft">{c.about.eyebrow}</p>
-          <h2 className="mt-5 text-3xl font-extrabold leading-tight tracking-[-0.02em] sm:text-[40px]">
-            {c.about.title}
-          </h2>
+          <p className="text-xs font-bold tracking-wider text-accent">{c.about.eyebrow}</p>
+          <h2 className="display-title mt-4 text-3xl font-extrabold sm:text-4xl">{c.about.title}</h2>
+          <p className="mt-4 max-w-md leading-relaxed text-fg-soft">{c.about.body}</p>
         </div>
-        <div>
-          <p className="text-[17px] leading-relaxed text-fg-soft">{c.about.body}</p>
-          <div className="mt-9 grid gap-0 overflow-hidden rounded-[18px] border border-border bg-border sm:grid-cols-3">
-            {c.about.principles.map((p) => (
-              <div key={p.num} className="bg-card px-5 py-6">
-                <div className="text-[12px] font-bold text-fg-faint">{p.num}</div>
-                <div className="mt-4 text-[16px] font-bold tracking-tight">{p.title}</div>
-                <div className="mt-2 text-[14px] leading-relaxed text-fg-soft">{p.desc}</div>
-              </div>
-            ))}
-          </div>
+        <div className="grid gap-4" aria-label="MORISTACK principles">
+          {c.about.principles.map((p) => (
+            <article key={p.num} className="flex items-start gap-4 rounded-[14px] border border-border bg-bg px-5 py-4">
+              <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent text-xs font-bold text-white">
+                {Number(p.num)}
+              </span>
+              <span>
+                <h3 className="font-bold text-fg">{p.title}</h3>
+                <p className="mt-1 text-sm leading-relaxed text-fg-soft">{p.desc}</p>
+              </span>
+            </article>
+          ))}
         </div>
       </div>
     </section>

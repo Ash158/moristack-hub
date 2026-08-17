@@ -6,43 +6,42 @@ export function Hero({ locale }: { locale: Locale }) {
   const d = c.hero.diagram;
 
   return (
-    <section className="mx-auto grid w-full max-w-[1000px] items-center gap-12 px-6 pb-20 pt-14 sm:pt-24 md:grid-cols-[1.05fr_0.95fr] md:pb-24">
-      <div className="min-w-0">
-        <p className="inline-block rounded-full bg-card-muted px-3.5 py-1.5 text-[12.5px] font-bold tracking-[0.06em] text-fg-soft">
+    <section className="mx-auto grid max-w-7xl gap-14 px-6 py-16 sm:py-20 lg:grid-cols-2 lg:items-center lg:py-24">
+      <div>
+        <p className="mb-5 inline-block rounded-full border border-accent-soft bg-accent-soft px-3.5 py-1.5 text-xs font-semibold tracking-wide text-accent">
           {c.hero.eyebrow}
         </p>
-        <h1 className="mt-6 max-w-[720px] text-4xl font-extrabold leading-[1.15] tracking-[-0.035em] sm:text-[54px]">
+        <p className="mb-2.5 text-sm font-bold text-accent">MORISTACK, made workable</p>
+        <h1 className="display-title max-w-3xl text-4xl font-extrabold sm:text-5xl lg:text-[50px]">
           {c.hero.headline}
         </h1>
-        <p className="mt-5 max-w-[590px] text-lg leading-relaxed text-fg-soft">
+        <p className="mt-5 max-w-2xl text-[17px] leading-relaxed text-fg-soft">
           {c.hero.subhead}
         </p>
-        <div className="mt-10 flex flex-wrap gap-3">
-          <a href="#services" className="inline-flex min-h-11 items-center rounded-full bg-accent px-5 text-sm font-semibold text-white transition hover:bg-[var(--accent-hover)]">
+        <div className="mt-7 flex flex-wrap items-center gap-4">
+          <a href="#services" className="rounded-full bg-accent px-7 py-4 text-center text-base font-bold text-white no-underline hover:bg-[var(--accent-hover)]">
             {c.hero.ctaPrimary}
           </a>
-          <a href="#contact" className="inline-flex min-h-11 items-center rounded-full border border-border bg-card px-5 text-sm font-semibold text-fg transition hover:border-fg/30">
+          <a href="#contact" className="font-bold text-accent no-underline hover:text-[var(--accent-hover)]">
             {c.hero.ctaSecondary}
           </a>
         </div>
       </div>
 
-      <div className="min-w-0 rounded-[22px] border border-border bg-card p-5 shadow-sm">
-        <div className="rounded-[18px] border border-border bg-bg p-6">
-          <div className="flex items-center justify-center gap-2.5">
-            <span aria-hidden="true" className="h-2.5 w-2.5 rounded-full bg-[var(--call-accent)]" />
-            <span aria-hidden="true" className="h-px w-16 bg-border" />
-            <span className="rounded-full bg-accent-soft px-3 py-1.5 text-[11px] font-bold tracking-[0.12em] text-accent">MORISTACK</span>
-            <span aria-hidden="true" className="h-px w-16 bg-border" />
-            <span aria-hidden="true" className="h-2.5 w-2.5 rounded-full bg-[var(--plan-accent)]" />
-          </div>
-          <div className="mt-8 grid grid-cols-3 overflow-hidden rounded-[14px] border border-border bg-border text-center text-[13px] font-semibold">
-            <div className="bg-card px-3 py-4 text-fg-soft">{d.from}</div>
-            <div className="bg-card px-3 py-4 text-fg">{d.mid}</div>
-            <div className="bg-card px-3 py-4 text-fg-soft">{d.to}</div>
-          </div>
+      <aside aria-hidden="true" className="flex min-h-60 flex-col items-center justify-center gap-[18px] rounded-[28px] border border-accent-soft bg-accent-soft p-8">
+        <svg viewBox="0 0 320 100" className="w-full max-w-[320px]">
+          <line x1="50" y1="52" x2="140" y2="44" stroke="var(--accent)" strokeWidth="2" strokeDasharray="6 8" />
+          <line x1="182" y1="44" x2="270" y2="52" stroke="var(--accent)" strokeWidth="2" strokeDasharray="6 8" />
+          <circle cx="30" cy="52" r="18" fill="white" stroke="var(--accent)" strokeWidth="2.5" />
+          <circle cx="160" cy="40" r="27" fill="var(--accent)" />
+          <circle cx="290" cy="52" r="18" fill="white" stroke="var(--accent)" strokeWidth="2.5" />
+        </svg>
+        <div className="flex w-full max-w-[320px] justify-between text-[12.5px] font-bold text-fg">
+          <span className="w-20 text-center">{d.from}</span>
+          <span className="w-[110px] text-center text-accent">MORISTACK</span>
+          <span className="w-20 text-center">{d.to}</span>
         </div>
-      </div>
+      </aside>
     </section>
   );
 }

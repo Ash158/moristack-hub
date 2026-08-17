@@ -5,69 +5,18 @@ import { getContent } from "@/lib/content";
 export function Footer({ locale }: { locale: Locale }) {
   const c = getContent(locale);
   return (
-    <footer
-      className="mx-auto"
-      style={{
-        maxWidth: 1200,
-        padding: "56px 32px",
-        display: "flex",
-        flexWrap: "wrap",
-        justifyContent: "space-between",
-        alignItems: "flex-start",
-        gap: 24,
-      }}
-    >
-      <div>
-        <Logo size="sm" asLink={false} />
-        <div
-          className="text-fg-softer"
-          style={{ fontSize: 14, maxWidth: 340, lineHeight: 1.6, marginTop: 10 }}
-        >
-          {c.footer.tagline}
+    <footer className="border-t border-border bg-card px-6 py-10">
+      <div className="mx-auto flex max-w-7xl flex-col gap-5 text-sm">
+        <div>
+          <Logo size="sm" asLink={false} />
+          <p className="mt-3 max-w-3xl leading-6 text-fg-faint">{c.footer.tagline}</p>
         </div>
-      </div>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          gap: 10,
-          alignItems: "flex-end",
-        }}
-      >
-        <div
-          style={{
-            display: "flex",
-            gap: 24,
-            fontSize: 14,
-            fontWeight: 600,
-          }}
-        >
-          <a
-            href="https://call.moristack.com"
-            target="_blank"
-            rel="noopener"
-            style={{ color: "var(--call-accent)" }}
-          >
-            {c.footer.callLabel}
-          </a>
-          <a
-            href="https://plan.moristack.com"
-            target="_blank"
-            rel="noopener"
-            style={{ color: "var(--plan-accent)" }}
-          >
-            {c.footer.planLabel}
-          </a>
-          <a
-            href={`mailto:${c.contactEmail}`}
-            style={{ color: "var(--muted)" }}
-          >
-            {c.footer.contactLabel}
-          </a>
-        </div>
-        <div className="text-fg-faint" style={{ fontSize: 13 }}>
-          {c.footer.copyright}
-        </div>
+        <nav aria-label="Footer navigation" className="flex flex-wrap gap-x-5 gap-y-2 text-fg-soft">
+          <a href="https://call.moristack.com" target="_blank" rel="noopener" className="hover:text-fg">{c.footer.callLabel}</a>
+          <a href="https://plan.moristack.com" target="_blank" rel="noopener" className="hover:text-fg">{c.footer.planLabel}</a>
+          <a href={`mailto:${c.contactEmail}`} className="hover:text-fg">{c.footer.contactLabel}</a>
+        </nav>
+        <p className="text-fg-faint">{c.footer.copyright}</p>
       </div>
     </footer>
   );

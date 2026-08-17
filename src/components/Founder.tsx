@@ -4,15 +4,16 @@ import { getContent } from "@/lib/content";
 export function Founder({ locale }: { locale: Locale }) {
   const c = getContent(locale);
   return (
-    <section id="founder" className="border-y border-border bg-card">
-      <div className="mx-auto max-w-[1000px] px-6 py-18 sm:py-20">
-        <p className="text-[12.5px] font-bold tracking-[0.06em] text-fg-soft">{c.founder.eyebrow}</p>
-        <h2 className="mt-5 max-w-[720px] text-3xl font-extrabold leading-tight tracking-[-0.02em] sm:text-[40px]">
-          {c.founder.title}
-        </h2>
-        <p className="mt-5 max-w-[720px] text-[17px] leading-relaxed text-fg-soft">
-          {c.founder.body}
-        </p>
+    <section id="founder" className="bg-card-muted px-6 py-16 sm:py-20">
+      <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-10">
+        <div>
+          <p className="text-xs font-bold tracking-wider text-accent">{c.founder.eyebrow}</p>
+          <h2 className="mt-3 text-2xl font-extrabold sm:text-3xl">{c.founder.title}</h2>
+          <p className="mt-3 max-w-3xl leading-relaxed text-fg-soft">{c.founder.body}</p>
+        </div>
+        <a href="#contact" className="whitespace-nowrap rounded-full border border-border bg-card px-6 py-3.5 text-center font-bold text-fg no-underline hover:border-accent">
+          Contact MORISTACK
+        </a>
       </div>
     </section>
   );

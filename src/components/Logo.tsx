@@ -2,13 +2,10 @@ import Link from "next/link";
 
 type LogoSize = "sm" | "md" | "lg";
 
-const SIZES: Record<
-  LogoSize,
-  { fontSize: number; dotSize: number; gap: number; markWidth: number; barHeight: number; markGap: number }
-> = {
-  sm: { fontSize: 17, dotSize: 5, gap: 6, markWidth: 23, barHeight: 3, markGap: 5 },
-  md: { fontSize: 20, dotSize: 6, gap: 7, markWidth: 28, barHeight: 3, markGap: 5 },
-  lg: { fontSize: 24, dotSize: 7, gap: 8, markWidth: 34, barHeight: 4, markGap: 6 },
+const SIZES: Record<LogoSize, { fontSize: number; dotSize: number; gap: number; badgeFont: number }> = {
+  sm: { fontSize: 17, dotSize: 6, gap: 6, badgeFont: 10.5 },
+  md: { fontSize: 19, dotSize: 7, gap: 6, badgeFont: 11 },
+  lg: { fontSize: 24, dotSize: 8, gap: 7, badgeFont: 12 },
 };
 
 export function Logo({
@@ -20,58 +17,35 @@ export function Logo({
 }) {
   const s = SIZES[size];
   const inner = (
-    <span
-      style={{
-        display: "inline-flex",
-        alignItems: "center",
-        gap: s.gap + 2,
-        color: "inherit",
-        lineHeight: 1,
-      }}
-    >
+    <span className="inline-flex items-center gap-3 text-fg">
       <span
-        aria-hidden="true"
-        style={{
-          display: "inline-flex",
-          width: s.markWidth,
-          flexDirection: "column",
-          alignItems: "flex-start",
-          gap: s.markGap,
-        }}
+        className="inline-flex items-center tracking-tight"
+        style={{ gap: s.gap, fontSize: s.fontSize, lineHeight: 1 }}
       >
-        <span style={{ width: "69%", height: s.barHeight, background: "currentColor" }} />
-        <span style={{ width: "100%", height: s.barHeight, background: "currentColor" }} />
-        <span style={{ width: "50%", height: s.barHeight, background: "currentColor" }} />
-      </span>
-      <span
-        style={{
-          display: "inline-flex",
-          alignItems: "center",
-          fontSize: s.fontSize,
-          letterSpacing: "-0.025em",
-          lineHeight: 1,
-        }}
-      >
-        <span style={{ fontWeight: 900 }}>MORI</span>
+        <span style={{ fontWeight: 400 }}>MORI</span>
         <span
           aria-hidden="true"
           style={{
             width: s.dotSize,
             height: s.dotSize,
-            background: "currentColor",
+            background: "var(--accent)",
             display: "inline-block",
-            borderRadius: "50%",
-            margin: `0 ${Math.round(s.dotSize * 0.4)}px`,
           }}
         />
-        <span style={{ fontWeight: 300 }}>STACK</span>
+        <span style={{ fontWeight: 800 }}>STACK</span>
+      </span>
+      <span
+        className="rounded-full bg-accent-soft px-2 py-[3px] font-bold tracking-wider text-accent"
+        style={{ fontSize: s.badgeFont, lineHeight: 1 }}
+      >
+        HUB
       </span>
     </span>
   );
 
   if (!asLink) return inner;
   return (
-    <Link href="/" aria-label="MORISTACK home" style={{ color: "inherit", textDecoration: "none" }}>
+    <Link href="/" aria-label="MORISTACK home" className="no-underline">
       {inner}
     </Link>
   );
