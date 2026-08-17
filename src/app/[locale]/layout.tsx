@@ -33,7 +33,7 @@ const organizationJsonLd = {
     {
       "@type": "ContactPoint",
       contactType: "customer support",
-      email: "hello@moristack.com",
+      email: "support@moristack.com",
       availableLanguage: ["en", "ja"],
     },
   ],
