@@ -26,7 +26,7 @@ function FlowDiagram({ from, mid, to }: { from: string; mid: string; to: string 
 
         {/* connecting lines with arrowheads */}
         <line
-          x1="78"
+          x1="84"
           y1="100"
           x2="158"
           y2="100"
@@ -39,7 +39,7 @@ function FlowDiagram({ from, mid, to }: { from: string; mid: string; to: string 
         <line
           x1="202"
           y1="100"
-          x2="282"
+          x2="276"
           y2="100"
           stroke="var(--accent)"
           strokeWidth="1.5"
@@ -49,15 +49,15 @@ function FlowDiagram({ from, mid, to }: { from: string; mid: string; to: string 
         />
 
         {/* left node — You */}
-        <circle cx="55" cy="100" r="22" fill="white" stroke="var(--accent)" strokeWidth="2" />
+        <circle cx="55" cy="100" r="27" fill="white" stroke="var(--accent)" strokeWidth="2" />
         <text
           x="55"
-          y="106"
+          y="105"
           textAnchor="middle"
-          fontSize="11"
+          fontSize="9.5"
           fontWeight="700"
           fill="var(--foreground)"
-          style={{ letterSpacing: "0.04em" }}
+          style={{ letterSpacing: "0.01em" }}
         >
           {from}
         </text>
@@ -99,15 +99,15 @@ function FlowDiagram({ from, mid, to }: { from: string; mid: string; to: string 
         </text>
 
         {/* right node — Destination */}
-        <circle cx="305" cy="100" r="22" fill="white" stroke="var(--accent)" strokeWidth="2" />
+        <circle cx="305" cy="100" r="27" fill="white" stroke="var(--accent)" strokeWidth="2" />
         <text
           x="305"
-          y="106"
+          y="105"
           textAnchor="middle"
-          fontSize="11"
+          fontSize="9.5"
           fontWeight="700"
           fill="var(--foreground)"
-          style={{ letterSpacing: "0.04em" }}
+          style={{ letterSpacing: "0.01em" }}
         >
           {to}
         </text>
