@@ -1,18 +1,20 @@
 @import "tailwindcss";
 
 :root {
-  --background: #fbfaf7;
-  --foreground: #17181a;
-  --muted: #52514c;
-  --muted-soft: #7a7669;
-  --muted-faint: #a49f8f;
-  --border: #e4e1d9;
-  --card: #f3f1ec;
-  --accent: #c1693f;
-  --call-accent: #3b63c9;
-  --call-accent-bg: #eef2fc;
-  --plan-accent: #3d6b52;
-  --plan-accent-bg: #eaf2ec;
+  --background: #f8f5ef;
+  --foreground: #1f2328;
+  --muted: #56534b;
+  --muted-soft: #7b7669;
+  --muted-faint: #aaa28f;
+  --border: #ded6c8;
+  --card: #fffdf8;
+  --card-muted: #eee6d8;
+  --accent: #23443a;
+  --accent-2: #b89b5e;
+  --call-accent: #23443a;
+  --call-accent-bg: #e7eee9;
+  --plan-accent: #8b6f3e;
+  --plan-accent-bg: #f2ecdf;
 }
 
 @theme inline {
@@ -35,17 +37,24 @@
 
 html,
 body {
-  background: var(--background);
+  background:
+    radial-gradient(circle at top left, rgba(184, 155, 94, 0.18), transparent 32rem),
+    linear-gradient(180deg, #fbf8f1 0%, var(--background) 42%, #f2ece1 100%);
   color: var(--foreground);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-feature-settings: "ss01" 1, "cv11" 1;
 }
 
+a {
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.18em;
+}
+
 *:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 2px;
-  border-radius: 4px;
+  border-radius: 6px;
 }
 
 ::selection {

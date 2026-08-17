@@ -6,158 +6,55 @@ export function Hero({ locale }: { locale: Locale }) {
   const d = c.hero.diagram;
 
   return (
-    <section
-      className="mx-auto grid items-center"
-      style={{
-        maxWidth: 1200,
-        padding: "36px 32px 110px",
-        gridTemplateColumns: "1.05fr 0.95fr",
-        gap: 64,
-      }}
-    >
-      <div>
-        <div
-          className="inline-block rounded-full font-bold tracking-[0.08em]"
-          style={{
-            padding: "6px 14px",
-            background: "var(--card)",
-            color: "var(--muted)",
-            fontSize: 12,
-            marginBottom: 22,
-          }}
-        >
+    <section className="relative mx-auto grid max-w-[1200px] items-center gap-12 px-6 pb-24 pt-12 md:grid-cols-[1.04fr_0.96fr] md:px-8 md:pb-28 md:pt-16 lg:gap-16">
+      <div className="relative z-10">
+        <div className="mb-6 inline-flex rounded-full border border-border bg-card/75 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.16em] text-fg-softer shadow-sm">
           {c.hero.eyebrow}
         </div>
-        <h1
-          style={{
-            fontSize: "clamp(34px, 4.6vw, 54px)",
-            fontWeight: 900,
-            lineHeight: 1.14,
-            letterSpacing: "-0.02em",
-            margin: "0 0 24px",
-            textWrap: "pretty",
-          }}
-        >
+        <h1 className="max-w-[680px] text-[clamp(38px,5.2vw,68px)] font-black leading-[1.04] tracking-[-0.045em] text-fg text-balance">
           {c.hero.headline}
         </h1>
-        <p
-          className="text-fg-soft"
-          style={{
-            fontSize: 18,
-            lineHeight: 1.7,
-            maxWidth: 520,
-            margin: "0 0 34px",
-          }}
-        >
+        <p className="mt-7 max-w-[590px] text-[17px] leading-[1.9] text-fg-soft md:text-[18px]">
           {c.hero.subhead}
         </p>
-        <div className="flex flex-wrap gap-3.5">
+        <div className="mt-10 flex flex-wrap gap-3.5">
           <a
             href="#services"
-            className="inline-block rounded-full font-bold transition hover:opacity-90"
-            style={{
-              background: "var(--accent)",
-              color: "var(--background)",
-              padding: "15px 26px",
-              fontSize: 15,
-            }}
+            className="inline-flex rounded-full bg-accent px-7 py-4 text-[15px] font-bold text-bg shadow-[0_18px_45px_rgba(35,68,58,0.22)] transition hover:-translate-y-0.5 hover:opacity-95"
           >
             {c.hero.ctaPrimary}
           </a>
           <a
             href="#contact"
-            className="inline-block rounded-full font-bold transition hover:bg-card"
-            style={{
-              border: "1px solid var(--border)",
-              color: "var(--foreground)",
-              padding: "15px 26px",
-              fontSize: 15,
-            }}
+            className="inline-flex rounded-full border border-border bg-card/70 px-7 py-4 text-[15px] font-bold text-fg transition hover:-translate-y-0.5 hover:border-accent"
           >
             {c.hero.ctaSecondary}
           </a>
         </div>
       </div>
 
-      <div
-        className="rounded-3xl"
-        style={{
-          background: "var(--card)",
-          padding: "52px 36px",
-        }}
-      >
-        <div
-          className="flex items-center justify-center"
-          style={{ marginBottom: 16 }}
-        >
-          <span
-            aria-hidden="true"
-            style={{
-              width: 20,
-              height: 20,
-              borderRadius: "50%",
-              border: "2px solid var(--accent)",
-              background: "var(--background)",
-              flexShrink: 0,
-            }}
-          />
-          <span
-            aria-hidden="true"
-            style={{
-              flex: 1,
-              maxWidth: 56,
-              borderTop: "2px dashed #c1beb2",
-              margin: "0 2px",
-            }}
-          />
-          <span
-            aria-hidden="true"
-            style={{
-              width: 30,
-              height: 30,
-              borderRadius: "50%",
-              background: "var(--accent)",
-              flexShrink: 0,
-            }}
-          />
-          <span
-            aria-hidden="true"
-            style={{
-              flex: 1,
-              maxWidth: 56,
-              borderTop: "2px dashed #c1beb2",
-              margin: "0 2px",
-            }}
-          />
-          <span
-            aria-hidden="true"
-            style={{
-              width: 20,
-              height: 20,
-              borderRadius: "50%",
-              border: "2px solid var(--accent)",
-              background: "var(--background)",
-              flexShrink: 0,
-            }}
-          />
-        </div>
-        <div className="flex justify-between text-center">
-          <div
-            className="font-semibold text-fg-soft"
-            style={{ fontSize: 13, maxWidth: 80 }}
-          >
-            {d.from}
+      <div className="relative overflow-hidden rounded-[2rem] border border-border bg-card/80 p-7 shadow-[0_24px_80px_rgba(31,35,40,0.10)] backdrop-blur md:p-9">
+        <div className="absolute -right-16 -top-16 h-44 w-44 rounded-full bg-[rgba(184,155,94,0.22)] blur-2xl" />
+        <div className="absolute -bottom-20 -left-20 h-52 w-52 rounded-full bg-[rgba(35,68,58,0.12)] blur-2xl" />
+        <div className="relative rounded-[1.5rem] border border-border bg-[#fbf8f1] p-6 md:p-8">
+          <div className="mb-10 flex items-center justify-center">
+            <span aria-hidden="true" className="h-5 w-5 shrink-0 rounded-full border-2 border-accent bg-card" />
+            <span aria-hidden="true" className="mx-2 h-px max-w-20 flex-1 border-t border-dashed border-[#bdb4a4]" />
+            <span aria-hidden="true" className="grid h-14 w-14 shrink-0 place-items-center rounded-full bg-accent text-xs font-black tracking-[0.14em] text-bg shadow-[0_16px_40px_rgba(35,68,58,0.25)]">
+              MS
+            </span>
+            <span aria-hidden="true" className="mx-2 h-px max-w-20 flex-1 border-t border-dashed border-[#bdb4a4]" />
+            <span aria-hidden="true" className="h-5 w-5 shrink-0 rounded-full border-2 border-accent bg-card" />
           </div>
-          <div className="font-extrabold" style={{ fontSize: 13, maxWidth: 100 }}>
-            {d.mid}
-          </div>
-          <div
-            className="font-semibold text-fg-soft"
-            style={{ fontSize: 13, maxWidth: 100 }}
-          >
-            {d.to}
+          <div className="grid grid-cols-3 gap-3 text-center">
+            <div className="rounded-2xl bg-card px-3 py-4 text-[13px] font-semibold text-fg-soft">{d.from}</div>
+            <div className="rounded-2xl bg-accent px-3 py-4 text-[13px] font-extrabold text-bg">{d.mid}</div>
+            <div className="rounded-2xl bg-card px-3 py-4 text-[13px] font-semibold text-fg-soft">{d.to}</div>
           </div>
         </div>
+        <p className="relative mt-5 text-center text-[12px] font-semibold uppercase tracking-[0.18em] text-fg-faint">
+          Human-reviewed support for Japan
+        </p>
       </div>
     </section>
   );

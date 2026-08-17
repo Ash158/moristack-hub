@@ -4,40 +4,15 @@ import { getContent } from "@/lib/content";
 export function Founder({ locale }: { locale: Locale }) {
   const c = getContent(locale);
   return (
-    <section
-      id="founder"
-      style={{ background: "var(--card)" }}
-    >
-      <div
-        className="mx-auto"
-        style={{ maxWidth: 1200, padding: "90px 32px" }}
-      >
-        <div
-          className="font-bold tracking-[0.08em] text-fg-soft"
-          style={{ fontSize: 12, marginBottom: 14 }}
-        >
+    <section id="founder" className="bg-[#1f2f2a] text-bg">
+      <div className="mx-auto max-w-[1200px] px-6 py-20 md:px-8 md:py-24">
+        <div className="text-[12px] font-bold uppercase tracking-[0.18em] text-[#d8c69c]">
           {c.founder.eyebrow}
         </div>
-        <h2
-          style={{
-            fontSize: "clamp(26px, 3.2vw, 36px)",
-            fontWeight: 800,
-            letterSpacing: "-0.01em",
-            margin: "0 0 18px",
-            maxWidth: 680,
-          }}
-        >
+        <h2 className="mt-5 max-w-[720px] text-[clamp(28px,3.5vw,44px)] font-black leading-[1.12] tracking-[-0.035em] text-balance">
           {c.founder.title}
         </h2>
-        <p
-          className="text-fg-soft"
-          style={{
-            fontSize: 17,
-            lineHeight: 1.75,
-            maxWidth: 640,
-            margin: 0,
-          }}
-        >
+        <p className="mt-6 max-w-[720px] text-[17px] leading-[1.9] text-[#e6dfd1]">
           {c.founder.body}
         </p>
       </div>
