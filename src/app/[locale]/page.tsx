@@ -27,7 +27,7 @@ const COPY = {
   en: {
     eyebrow: "MORISTACK",
     heading: "Independent apps, built in Japan.",
-    lede: "Focused digital tools, services, and experiments — one problem at a time, shipped from Osaka.",
+    lede: "Focused digital tools, services, and experiments — one problem at a time.",
     servicesHeading: "What we're shipping",
     servicesLede:
       "Each service is a small, focused product. Use what you need; ignore the rest.",
@@ -36,7 +36,7 @@ const COPY = {
   ja: {
     eyebrow: "MORISTACK",
     heading: "暮らしのための、小さなデジタルサービス。",
-    lede: "大阪から、暮らしに寄り添う小さな道具をひとつずつ作っています。",
+    lede: "暮らしに寄り添う小さな道具をひとつずつ作っています。",
     servicesHeading: "公開中のサービス",
     servicesLede:
       "それぞれ独立した小さなプロダクトです。気になるものだけご利用ください。",
