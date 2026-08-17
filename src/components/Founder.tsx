@@ -71,7 +71,7 @@ export function Founder({ locale }: { locale: Locale }) {
             className="absolute -inset-3 rounded-[28px] bg-accent-soft blur-xl"
             aria-hidden="true"
           />
-          <div className="relative h-full w-full overflow-hidden rounded-[28px] shadow-[0_20px_60px_-30px_rgba(177,80,47,0.6)]">
+          <div className="relative h-full w-full overflow-hidden rounded-[28px] shadow-[0_20px_60px_-30px_rgba(15,29,58,0.6)]">
             <CompanyMark />
           </div>
         </div>

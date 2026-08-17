@@ -12,22 +12,22 @@
   --card: #ffffff;
   --card-muted: #f0f3f6;
 
-  /* Brand accent — shared terracotta */
-  --accent: #b1502f;
-  --accent-hover: #96401f;
-  --accent-deep: #7d341a;
-  --accent-soft: #fbeee7;
-  --accent-soft-line: #efd2c4;
+  /* Brand accent — shared deep navy (apex / main brand) */
+  --accent: #0f1d3a;
+  --accent-hover: #0a1428;
+  --accent-deep: #050d1a;
+  --accent-soft: #e8eef7;
+  --accent-soft-line: #c3d0e5;
 
   /* Per-product accents */
   --call-accent: #3a6ea5;
   --call-accent-dark: #2c567f;
   --call-accent-soft: #eaf1f7;
   --call-accent-soft-line: #cfe0ee;
-  --plan-accent: #9a6a24;
-  --plan-accent-dark: #75501b;
-  --plan-accent-soft: #f6efe3;
-  --plan-accent-soft-line: #ead7b9;
+  --plan-accent: #3f7a52;
+  --plan-accent-dark: #2e5c3d;
+  --plan-accent-soft: #eaf4ee;
+  --plan-accent-soft-line: #cfe6d8;
 }
 
 @theme inline {
@@ -103,11 +103,11 @@ a {
   color: var(--accent-deep);
 }
 
-/* Subtle hero gradient — terracotta wash fading to paper */
+/* Subtle hero gradient — deep navy wash fading to paper */
 .hero-wash {
   background:
-    radial-gradient(ellipse 60% 50% at 100% 0%, rgba(177, 80, 47, 0.07), transparent 60%),
-    radial-gradient(ellipse 80% 60% at 0% 100%, rgba(177, 80, 47, 0.05), transparent 60%),
+    radial-gradient(ellipse 60% 50% at 100% 0%, rgba(15, 29, 58, 0.08), transparent 60%),
+    radial-gradient(ellipse 80% 60% at 0% 100%, rgba(15, 29, 58, 0.05), transparent 60%),
     var(--background);
 }
 
