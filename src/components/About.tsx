@@ -25,7 +25,8 @@ export function About({ locale }: { locale: Locale }) {
               >
                 <span
                   aria-hidden="true"
-                  className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-accent text-sm font-extrabold text-white shadow-[0_1px_0_rgba(0,0,0,0.05)]"
+                  className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-accent text-sm font-extrabold shadow-[0_1px_0_rgba(0,0,0,0.05)]"
+                  style={{ color: "#ffffff" }}
                 >
                   {p.num}
                 </span>

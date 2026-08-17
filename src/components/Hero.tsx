@@ -181,7 +181,8 @@ export function Hero({ locale }: { locale: Locale }) {
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <a
                 href="#services"
-                className="inline-flex items-center gap-2 rounded-full bg-accent px-7 py-3.5 text-center text-base font-bold text-white no-underline shadow-[0_1px_0_rgba(0,0,0,0.05)] transition hover:bg-accent-hover"
+                className="inline-flex items-center gap-2 rounded-full bg-accent px-7 py-3.5 text-center text-base font-bold no-underline shadow-[0_1px_0_rgba(0,0,0,0.05)] transition hover:bg-accent-hover"
+                style={{ color: "#ffffff" }}
               >
                 {c.hero.ctaPrimary}
                 <span aria-hidden="true" className="text-lg leading-none">
