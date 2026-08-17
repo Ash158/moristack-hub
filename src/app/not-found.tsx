@@ -8,7 +8,7 @@ export default function NotFound() {
           404
         </p>
         <h1 className="mt-6 text-4xl font-semibold tracking-[-0.045em] sm:text-5xl">
-          We couldn't find that page.
+          We couldn&apos;t find that page.
         </h1>
         <p className="mt-4 text-lg text-fg-soft">
           The link may be old, or the page may have moved.
