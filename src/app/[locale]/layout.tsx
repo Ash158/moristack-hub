@@ -1,42 +1,32 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { Geist, Geist_Mono } from "next/font/google";
-import { Header } from "@/components/Header";
+import { TopNav } from "@/components/TopNav";
 import { Footer } from "@/components/Footer";
-import { isLocale, LOCALES, type Locale } from "@/lib/i18n";
-
-const geistSans = Geist({
-  subsets: ["latin"],
-  variable: "--font-geist-sans",
-  display: "swap",
-});
-
-const geistMono = Geist_Mono({
-  subsets: ["latin"],
-  variable: "--font-geist-mono",
-  display: "swap",
-});
+import { isLocale, LOCALES, type Locale } from "@/lib/content";
+import { getContent } from "@/lib/content";
 
 const SITE_URL = "https://moristack.com";
 
-const organizationJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  name: "MORISTACK",
-  alternateName: "MORI STACK",
-  url: SITE_URL,
-  logo: `${SITE_URL}/logo.svg`,
-  description:
-    "MORISTACK builds focused digital tools, services, and experiments from Japan.",
-  sameAs: [],
-  contactPoint: [
-    {
-      "@type": "ContactPoint",
-      contactType: "customer support",
-      email: "support@moristack.com",
-      availableLanguage: ["en", "ja"],
-    },
-  ],
+const organizationJsonLd = (locale: Locale) => {
+  const c = getContent(locale);
+  return {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "MORISTACK",
+    alternateName: "MORI STACK",
+    url: SITE_URL,
+    logo: `${SITE_URL}/logo.svg`,
+    description: c.hero.subhead,
+    sameAs: [],
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        contactType: "customer support",
+        email: c.contactEmail,
+        availableLanguage: ["en", "ja"],
+      },
+    ],
+  };
 };
 
 export async function generateStaticParams() {
@@ -50,7 +40,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   if (!isLocale(locale)) return {};
-  const isJa = locale === "ja";
+  const c = getContent(locale);
   return {
     alternates: {
       canonical: `/${locale}`,
@@ -61,14 +51,10 @@ export async function generateMetadata({
       },
     },
     openGraph: {
-      title: isJa
-        ? "MORISTACK — 暮らしのための小さなデジタルサービス"
-        : "MORISTACK — Independent apps, built in Japan",
-      description: isJa
-        ? "MORISTACK は、日本から暮らしに寄り添う小さなデジタルサービスを作ります。"
-        : "MORISTACK builds focused digital tools, services, and experiments from Japan.",
+      title: c.hero.headline,
+      description: c.hero.subhead,
       url: `https://moristack.com/${locale}`,
-      locale: isJa ? "ja_JP" : "en_US",
+      locale: locale === "ja" ? "ja_JP" : "en_US",
     },
   };
 }
@@ -82,21 +68,24 @@ export default async function LocaleLayout({
 }) {
   const { locale } = await params;
   if (!isLocale(locale)) notFound();
-
   const typedLocale: Locale = locale;
 
   return (
     <div
       lang={typedLocale}
-      className={`${geistSans.variable} ${geistMono.variable} flex min-h-screen flex-col`}
+      className="flex min-h-screen flex-col"
     >
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(organizationJsonLd(typedLocale)),
+        }}
       />
-      <Header locale={typedLocale} />
+      <TopNav locale={typedLocale} />
       <main className="flex-1">{children}</main>
-      <Footer locale={typedLocale} />
+      <div id="contact">
+        <Footer locale={typedLocale} />
+      </div>
     </div>
   );
 }

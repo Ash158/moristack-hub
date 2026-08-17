@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { isLocale, type Locale } from "@/lib/i18n";
+import { isLocale, getContent } from "@/lib/content";
 
 export const revalidate = 3600;
 
@@ -10,33 +10,15 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   if (!isLocale(locale)) return {};
-  const isJa = locale === "ja";
+  const c = getContent(locale);
   return {
-    title: isJa ? "お問い合わせ" : "Contact",
-    description: isJa
-      ? "MORISTACK へのお問い合わせはこちら。"
-      : "Get in touch with the MORISTACK team.",
+    title: c.nav.contact,
+    description:
+      locale === "ja"
+        ? "MORISTACK へのお問い合わせはこちらから。"
+        : "Get in touch with MORISTACK.",
   };
 }
-
-const COPY = {
-  en: {
-    heading: "Contact",
-    lede: "We read every message. We don't promise an SLA, but we do promise a real reply.",
-    emailLabel: "Email",
-    email: "support@moristack.com",
-    response: "We usually reply within a few business days.",
-    note: "If your question is about a specific product, please use the contact form on that product's site — it gets to the right person faster.",
-  },
-  ja: {
-    heading: "お問い合わせ",
-    lede: "すべてのメッセージに目を通します。SLA は約束できませんが、必ず本物の返信を約束します。",
-    emailLabel: "メール",
-    email: "support@moristack.com",
-    response: "通常、数営業日以内にご返信します。",
-    note: "特定のプロダクトに関するお問い合わせは、各プロダクトのお問い合わせフォームからご連絡ください。担当者に早く届きます。",
-  },
-} as const;
 
 export default async function ContactPage({
   params,
@@ -45,29 +27,81 @@ export default async function ContactPage({
 }) {
   const { locale } = await params;
   if (!isLocale(locale)) return null;
-  const copy = COPY[locale as Locale];
+  const c = getContent(locale);
+
+  const heading = locale === "ja" ? "お問い合わせ" : "Contact";
+  const lede =
+    locale === "ja"
+      ? "ご質問・お見積り・その他なんでも、メールにてご連絡ください。"
+      : "Questions, quotes, or anything else — drop us an email.";
+  const emailLabel = locale === "ja" ? "メール" : "Email";
+  const note =
+    locale === "ja"
+      ? "サービス別にお問い合わせの場合は、各サービスサイト内のフォームが早く届きます。"
+      : "For service-specific questions, the contact form on each product site reaches the right person faster.";
 
   return (
-    <div className="mx-auto w-full max-w-2xl px-6 pt-20 pb-16">
-      <h1 className="text-4xl font-semibold tracking-[-0.04em] text-fg sm:text-5xl">
-        {copy.heading}
+    <section
+      className="mx-auto"
+      style={{ maxWidth: 1200, padding: "90px 32px" }}
+    >
+      <div
+        className="font-bold tracking-[0.08em] text-fg-soft"
+        style={{ fontSize: 12, marginBottom: 14 }}
+      >
+        {c.founder.eyebrow}
+      </div>
+      <h1
+        style={{
+          fontSize: "clamp(32px, 4vw, 48px)",
+          fontWeight: 900,
+          letterSpacing: "-0.02em",
+          margin: "0 0 18px",
+        }}
+      >
+        {heading}
       </h1>
-      <p className="mt-5 text-lg leading-relaxed text-fg-soft">{copy.lede}</p>
+      <p
+        className="text-fg-soft"
+        style={{
+          fontSize: 18,
+          lineHeight: 1.7,
+          maxWidth: 640,
+          margin: "0 0 40px",
+        }}
+      >
+        {lede}
+      </p>
 
-      <div className="mt-10 rounded-3xl border border-border bg-card p-7">
-        <p className="text-xs font-semibold tracking-[0.18em] text-muted uppercase">
-          {copy.emailLabel}
-        </p>
-        <a
-          href={`mailto:${copy.email}`}
-          className="mt-2 block text-2xl font-semibold tracking-[-0.02em] text-fg underline-offset-4 hover:underline"
+      <div
+        className="rounded-3xl border border-border bg-bg"
+        style={{ padding: 40 }}
+      >
+        <div
+          className="font-bold tracking-[0.08em] text-fg-soft"
+          style={{ fontSize: 12, marginBottom: 8 }}
         >
-          {copy.email}
+          {emailLabel}
+        </div>
+        <a
+          href={`mailto:${c.contactEmail}`}
+          className="block font-extrabold underline-offset-4 hover:underline"
+          style={{
+            fontSize: 28,
+            letterSpacing: "-0.01em",
+            color: "var(--foreground)",
+          }}
+        >
+          {c.contactEmail}
         </a>
-        <p className="mt-4 text-sm text-fg-soft">{copy.response}</p>
       </div>
 
-      <p className="mt-8 text-sm text-muted">{copy.note}</p>
-    </div>
+      <p
+        className="text-fg-faint"
+        style={{ fontSize: 14, marginTop: 24 }}
+      >
+        {note}
+      </p>
+    </section>
   );
 }

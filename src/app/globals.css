@@ -1,26 +1,35 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f7f7f4;
-  --foreground: #18181b;
-  --foreground-soft: #52525b;
-  --muted: #71717a;
-  --border: #e4e4e7;
-  --card: #ffffff;
-  --accent: #18181b;
-  --accent-soft: #f4f4f5;
+  --background: #fbfaf7;
+  --foreground: #17181a;
+  --muted: #52514c;
+  --muted-soft: #7a7669;
+  --muted-faint: #a49f8f;
+  --border: #e4e1d9;
+  --card: #f3f1ec;
+  --accent: #c1693f;
+  --call-accent: #3b63c9;
+  --call-accent-bg: #eef2fc;
+  --plan-accent: #3d6b52;
+  --plan-accent-bg: #eaf2ec;
 }
 
 @theme inline {
   --color-bg: var(--background);
   --color-fg: var(--foreground);
-  --color-fg-soft: var(--foreground-soft);
+  --color-fg-soft: var(--muted);
+  --color-fg-softer: var(--muted-soft);
+  --color-fg-faint: var(--muted-faint);
   --color-muted: var(--muted);
   --color-border: var(--border);
   --color-card: var(--card);
   --color-accent: var(--accent);
-  --color-accent-soft: var(--accent-soft);
-  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --color-call: var(--call-accent);
+  --color-call-bg: var(--call-accent-bg);
+  --color-plan: var(--plan-accent);
+  --color-plan-bg: var(--plan-accent-bg);
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, monospace;
 }
 
@@ -30,6 +39,7 @@ body {
   color: var(--foreground);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "ss01" 1, "cv11" 1;
 }
 
 *:focus-visible {

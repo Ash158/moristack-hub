@@ -1,44 +1,73 @@
-import Link from "next/link";
-import type { Locale } from "@/lib/i18n";
+import { Logo } from "@/components/Logo";
+import type { Locale } from "@/lib/content";
+import { getContent } from "@/lib/content";
 
 export function Footer({ locale }: { locale: Locale }) {
-  const year = new Date().getFullYear();
-  const navLabels = {
-    services: locale === "ja" ? "サービス" : "Services",
-    about: locale === "ja" ? "私たちについて" : "About",
-    contact: locale === "ja" ? "お問い合わせ" : "Contact",
-  };
-
+  const c = getContent(locale);
   return (
-    <footer className="mt-24 border-t border-border bg-card/40">
-      <div className="mx-auto flex w-full max-w-6xl flex-col gap-3 px-6 py-8 text-sm text-fg-soft sm:flex-row sm:items-center sm:justify-between">
-        <p>© {year} MORISTACK</p>
-        <ul className="flex flex-wrap items-center gap-x-5 gap-y-2">
-          <li>
-            <Link
-              href={`/${locale}/services`}
-              className="transition hover:text-fg"
-            >
-              {navLabels.services}
-            </Link>
-          </li>
-          <li>
-            <Link
-              href={`/${locale}/about`}
-              className="transition hover:text-fg"
-            >
-              {navLabels.about}
-            </Link>
-          </li>
-          <li>
-            <Link
-              href={`/${locale}/contact`}
-              className="transition hover:text-fg"
-            >
-              {navLabels.contact}
-            </Link>
-          </li>
-        </ul>
+    <footer
+      className="mx-auto"
+      style={{
+        maxWidth: 1200,
+        padding: "56px 32px",
+        display: "flex",
+        flexWrap: "wrap",
+        justifyContent: "space-between",
+        alignItems: "flex-start",
+        gap: 24,
+      }}
+    >
+      <div>
+        <Logo size="sm" asLink={false} />
+        <div
+          className="text-fg-softer"
+          style={{ fontSize: 14, maxWidth: 340, lineHeight: 1.6, marginTop: 10 }}
+        >
+          {c.footer.tagline}
+        </div>
+      </div>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          gap: 10,
+          alignItems: "flex-end",
+        }}
+      >
+        <div
+          style={{
+            display: "flex",
+            gap: 24,
+            fontSize: 14,
+            fontWeight: 600,
+          }}
+        >
+          <a
+            href="https://call.moristack.com"
+            target="_blank"
+            rel="noopener"
+            style={{ color: "var(--call-accent)" }}
+          >
+            {c.footer.callLabel}
+          </a>
+          <a
+            href="https://plan.moristack.com"
+            target="_blank"
+            rel="noopener"
+            style={{ color: "var(--plan-accent)" }}
+          >
+            {c.footer.planLabel}
+          </a>
+          <a
+            href={`mailto:${c.contactEmail}`}
+            style={{ color: "var(--muted)" }}
+          >
+            {c.footer.contactLabel}
+          </a>
+        </div>
+        <div className="text-fg-faint" style={{ fontSize: 13 }}>
+          {c.footer.copyright}
+        </div>
       </div>
     </footer>
   );
