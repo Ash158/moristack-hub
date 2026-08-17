@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
-const inter = Inter({
+const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
-  variable: "--font-inter",
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-jakarta",
   display: "swap",
 });
 
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
     template: "%s · MORISTACK",
   },
   description:
-    "MORISTACK is a practice for the practical side of Japan — CALL for phone-based arrangements, PLAN for trip planning.",
+    "MORISTACK — a small, considered operations partner for the practical side of Japan. CALL for Japanese phone calls, PLAN for custom Japan trip guides.",
   applicationName: "MORISTACK",
   authors: [{ name: "MORISTACK", url: "https://moristack.com" }],
   generator: "Next.js",
@@ -28,6 +29,8 @@ export const metadata: Metadata = {
     "PLAN",
     "電話代行",
     "旅行プランニング",
+    "Japan phone call",
+    "Japan trip planning",
   ],
   alternates: {
     canonical: "/",
@@ -39,18 +42,18 @@ export const metadata: Metadata = {
   },
   openGraph: {
     siteName: "MORISTACK",
-    title: "MORISTACK — A practice for the practical side of Japan",
+    title: "MORISTACK — Operations for the practical side of Japan",
     description:
-      "MORISTACK runs independent services including MORISTACK CALL, for phone-based arrangements, and MORISTACK PLAN, a trip-planning guide.",
+      "An independent operations partner for Japan tasks that are hard to move forward from abroad — Japanese phone calls and custom trip guides.",
     url: "https://moristack.com",
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "MORISTACK — A practice for the practical side of Japan",
+    title: "MORISTACK — Operations for the practical side of Japan",
     description:
-      "Independent services for the practical side of Japan: CALL, PLAN.",
+      "Independent operations for the practical side of Japan: CALL, PLAN.",
   },
   robots: { index: true, follow: true },
   icons: {
@@ -64,7 +67,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`h-full antialiased ${inter.variable}`}>
+    <html lang="en" className={`h-full antialiased ${jakarta.variable}`}>
       <body className="min-h-full flex flex-col bg-bg text-fg font-sans">
         {children}
         <Analytics />

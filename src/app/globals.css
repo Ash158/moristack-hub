@@ -1,22 +1,33 @@
 @import "tailwindcss";
 
 :root {
+  /* Brand neutrals — shared across all 3 MORISTACK sites */
   --background: #fafbfc;
   --foreground: #171a1c;
   --muted: #5b6268;
   --muted-soft: #737b82;
   --muted-faint: #93999f;
   --border: #e1e6ea;
+  --border-soft: #eef1f4;
   --card: #ffffff;
   --card-muted: #f0f3f6;
+
+  /* Brand accent — shared terracotta */
   --accent: #b1502f;
   --accent-hover: #96401f;
+  --accent-deep: #7d341a;
   --accent-soft: #fbeee7;
   --accent-soft-line: #efd2c4;
+
+  /* Per-product accents */
   --call-accent: #3a6ea5;
-  --call-accent-bg: #eaf1f7;
+  --call-accent-dark: #2c567f;
+  --call-accent-soft: #eaf1f7;
+  --call-accent-soft-line: #cfe0ee;
   --plan-accent: #9a6a24;
-  --plan-accent-bg: #f6efe3;
+  --plan-accent-dark: #75501b;
+  --plan-accent-soft: #f6efe3;
+  --plan-accent-soft-line: #ead7b9;
 }
 
 @theme inline {
@@ -27,17 +38,21 @@
   --color-fg-faint: var(--muted-faint);
   --color-muted: var(--muted);
   --color-border: var(--border);
+  --color-border-soft: var(--border-soft);
   --color-card: var(--card);
   --color-card-muted: var(--card-muted);
   --color-accent: var(--accent);
-  --color-accent-soft: var(--accent-soft);
   --color-accent-hover: var(--accent-hover);
+  --color-accent-deep: var(--accent-deep);
+  --color-accent-soft: var(--accent-soft);
   --color-call: var(--call-accent);
-  --color-call-bg: var(--call-accent-bg);
+  --color-call-dark: var(--call-accent-dark);
+  --color-call-bg: var(--call-accent-soft);
   --color-plan: var(--plan-accent);
-  --color-plan-bg: var(--plan-accent-bg);
-  --font-sans: var(--font-inter), Arial, Helvetica, sans-serif;
-  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, monospace;
+  --color-plan-dark: var(--plan-accent-dark);
+  --color-plan-bg: var(--plan-accent-soft);
+  --font-sans: var(--font-jakarta), "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system, "Hiragino Kaku Gothic ProN", "Yu Gothic UI", "Meiryo", sans-serif;
+  --font-mono: var(--font-jakarta-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
 }
 
 * {
@@ -55,19 +70,26 @@ body {
   color: var(--foreground);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-feature-settings: "ss01" 1, "cv11" 1;
+  text-rendering: optimizeLegibility;
 }
 
 a {
   color: inherit;
-  text-decoration-thickness: 0.08em;
+  text-decoration-thickness: 0.06em;
   text-underline-offset: 0.18em;
 }
 
 .display-title {
   font-family: inherit;
-  letter-spacing: -0.02em;
-  line-height: 1.1;
+  letter-spacing: -0.025em;
+  line-height: 1.05;
+}
+
+.eyebrow {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
 }
 
 *:focus-visible {
@@ -78,4 +100,19 @@ a {
 
 ::selection {
   background: var(--accent-soft);
+  color: var(--accent-deep);
+}
+
+/* Subtle hero gradient — terracotta wash fading to paper */
+.hero-wash {
+  background:
+    radial-gradient(ellipse 60% 50% at 100% 0%, rgba(177, 80, 47, 0.07), transparent 60%),
+    radial-gradient(ellipse 80% 60% at 0% 100%, rgba(177, 80, 47, 0.05), transparent 60%),
+    var(--background);
+}
+
+/* Section dividers */
+.divider-soft {
+  background: linear-gradient(180deg, transparent 0%, var(--border-soft) 50%, transparent 100%);
+  height: 1px;
 }

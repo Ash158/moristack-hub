@@ -4,6 +4,7 @@ import { getContent } from "@/lib/content";
 import { Hero } from "@/components/Hero";
 import { About } from "@/components/About";
 import { Services } from "@/components/Services";
+import { FeaturedGuides } from "@/components/FeaturedGuides";
 import { Founder } from "@/components/Founder";
 
 export const revalidate = 3600;
@@ -34,6 +35,7 @@ export default async function LocaleHome({
       <Hero locale={locale} />
       <About locale={locale} />
       <Services locale={locale} />
+      <FeaturedGuides locale={locale} />
       <Founder locale={locale} />
     </>
   );
