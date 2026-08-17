@@ -3,6 +3,7 @@ import { TopNav } from "@/components/TopNav";
 import { Hero } from "@/components/Hero";
 import { About } from "@/components/About";
 import { Services } from "@/components/Services";
+import { FeaturedGuides } from "@/components/FeaturedGuides";
 import { Founder } from "@/components/Founder";
 import { Footer } from "@/components/Footer";
 import { getContent } from "@/lib/content";
@@ -40,6 +41,7 @@ export default function ApexHome() {
         <Hero locale="ja" />
         <About locale="ja" />
         <Services locale="ja" />
+        <FeaturedGuides locale="ja" />
         <Founder locale="ja" />
       </main>
       <div id="contact">

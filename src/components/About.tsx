@@ -5,25 +5,39 @@ export function About({ locale }: { locale: Locale }) {
   const c = getContent(locale);
 
   return (
-    <section id="about" className="bg-card px-6 py-16 sm:py-20">
-      <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-2 lg:items-start">
-        <div>
-          <p className="text-xs font-bold tracking-wider text-accent">{c.about.eyebrow}</p>
-          <h2 className="display-title mt-4 text-3xl font-extrabold sm:text-4xl">{c.about.title}</h2>
-          <p className="mt-4 max-w-md leading-relaxed text-fg-soft">{c.about.body}</p>
-        </div>
-        <div className="grid gap-4" aria-label="MORISTACK principles">
-          {c.about.principles.map((p) => (
-            <article key={p.num} className="flex items-start gap-4 rounded-[14px] border border-border bg-bg px-5 py-4">
-              <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent text-xs font-bold text-white">
-                {Number(p.num)}
-              </span>
-              <span>
-                <h3 className="font-bold text-fg">{p.title}</h3>
-                <p className="mt-1 text-sm leading-relaxed text-fg-soft">{p.desc}</p>
-              </span>
-            </article>
-          ))}
+    <section id="about" className="border-y border-border bg-card">
+      <div className="mx-auto max-w-7xl px-6 py-20 sm:py-24">
+        <div className="grid gap-14 lg:grid-cols-[1fr_1.1fr] lg:items-start lg:gap-16">
+          <div>
+            <p className="eyebrow text-accent">{c.about.eyebrow}</p>
+            <h2 className="display-title mt-4 max-w-md text-[32px] font-extrabold text-fg sm:text-[40px]">
+              {c.about.title}
+            </h2>
+            <p className="mt-5 max-w-md text-[17px] leading-relaxed text-fg-soft">
+              {c.about.body}
+            </p>
+          </div>
+          <ol className="grid gap-4" aria-label={locale === "ja" ? "MORISTACKの3つの原則" : "Three MORISTACK principles"}>
+            {c.about.principles.map((p) => (
+              <li
+                key={p.num}
+                className="group flex items-start gap-5 rounded-[18px] border border-border bg-bg p-5 transition hover:border-accent-soft-line hover:bg-card"
+              >
+                <span
+                  aria-hidden="true"
+                  className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-accent text-sm font-extrabold text-white shadow-[0_1px_0_rgba(0,0,0,0.05)]"
+                >
+                  {p.num}
+                </span>
+                <span className="min-w-0">
+                  <h3 className="text-base font-bold text-fg">{p.title}</h3>
+                  <p className="mt-1.5 text-sm leading-relaxed text-fg-soft">
+                    {p.desc}
+                  </p>
+                </span>
+              </li>
+            ))}
+          </ol>
         </div>
       </div>
     </section>
