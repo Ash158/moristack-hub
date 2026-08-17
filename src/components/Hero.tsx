@@ -6,55 +6,42 @@ export function Hero({ locale }: { locale: Locale }) {
   const d = c.hero.diagram;
 
   return (
-    <section className="relative mx-auto grid max-w-[1200px] items-center gap-12 px-6 pb-24 pt-12 md:grid-cols-[1.04fr_0.96fr] md:px-8 md:pb-28 md:pt-16 lg:gap-16">
-      <div className="relative z-10">
-        <div className="mb-6 inline-flex rounded-full border border-border bg-card/75 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.16em] text-fg-softer shadow-sm">
+    <section className="mx-auto grid w-full max-w-[1000px] items-center gap-12 px-6 pb-20 pt-14 sm:pt-24 md:grid-cols-[1.05fr_0.95fr] md:pb-24">
+      <div className="min-w-0">
+        <p className="inline-block rounded-full bg-card-muted px-3.5 py-1.5 text-[12.5px] font-bold tracking-[0.06em] text-fg-soft">
           {c.hero.eyebrow}
-        </div>
-        <h1 className="max-w-[680px] text-[clamp(38px,5.2vw,68px)] font-black leading-[1.04] tracking-[-0.045em] text-fg text-balance">
+        </p>
+        <h1 className="mt-6 max-w-[720px] text-4xl font-extrabold leading-[1.15] tracking-[-0.035em] sm:text-[54px]">
           {c.hero.headline}
         </h1>
-        <p className="mt-7 max-w-[590px] text-[17px] leading-[1.9] text-fg-soft md:text-[18px]">
+        <p className="mt-5 max-w-[590px] text-lg leading-relaxed text-fg-soft">
           {c.hero.subhead}
         </p>
-        <div className="mt-10 flex flex-wrap gap-3.5">
-          <a
-            href="#services"
-            className="inline-flex rounded-full bg-accent px-7 py-4 text-[15px] font-bold text-bg shadow-[0_18px_45px_rgba(35,68,58,0.22)] transition hover:-translate-y-0.5 hover:opacity-95"
-          >
+        <div className="mt-10 flex flex-wrap gap-3">
+          <a href="#services" className="inline-flex min-h-11 items-center rounded-full bg-accent px-5 text-sm font-semibold text-white transition hover:bg-[var(--accent-hover)]">
             {c.hero.ctaPrimary}
           </a>
-          <a
-            href="#contact"
-            className="inline-flex rounded-full border border-border bg-card/70 px-7 py-4 text-[15px] font-bold text-fg transition hover:-translate-y-0.5 hover:border-accent"
-          >
+          <a href="#contact" className="inline-flex min-h-11 items-center rounded-full border border-border bg-card px-5 text-sm font-semibold text-fg transition hover:border-fg/30">
             {c.hero.ctaSecondary}
           </a>
         </div>
       </div>
 
-      <div className="relative overflow-hidden rounded-[2rem] border border-border bg-card/80 p-7 shadow-[0_24px_80px_rgba(31,35,40,0.10)] backdrop-blur md:p-9">
-        <div className="absolute -right-16 -top-16 h-44 w-44 rounded-full bg-[rgba(184,155,94,0.22)] blur-2xl" />
-        <div className="absolute -bottom-20 -left-20 h-52 w-52 rounded-full bg-[rgba(35,68,58,0.12)] blur-2xl" />
-        <div className="relative rounded-[1.5rem] border border-border bg-[#fbf8f1] p-6 md:p-8">
-          <div className="mb-10 flex items-center justify-center">
-            <span aria-hidden="true" className="h-5 w-5 shrink-0 rounded-full border-2 border-accent bg-card" />
-            <span aria-hidden="true" className="mx-2 h-px max-w-20 flex-1 border-t border-dashed border-[#bdb4a4]" />
-            <span aria-hidden="true" className="grid h-14 w-14 shrink-0 place-items-center rounded-full bg-accent text-xs font-black tracking-[0.14em] text-bg shadow-[0_16px_40px_rgba(35,68,58,0.25)]">
-              MS
-            </span>
-            <span aria-hidden="true" className="mx-2 h-px max-w-20 flex-1 border-t border-dashed border-[#bdb4a4]" />
-            <span aria-hidden="true" className="h-5 w-5 shrink-0 rounded-full border-2 border-accent bg-card" />
+      <div className="min-w-0 rounded-[22px] border border-border bg-card p-5 shadow-sm">
+        <div className="rounded-[18px] border border-border bg-bg p-6">
+          <div className="flex items-center justify-center gap-2.5">
+            <span aria-hidden="true" className="h-2.5 w-2.5 rounded-full bg-[var(--call-accent)]" />
+            <span aria-hidden="true" className="h-px w-16 bg-border" />
+            <span className="rounded-full bg-accent-soft px-3 py-1.5 text-[11px] font-bold tracking-[0.12em] text-accent">MORISTACK</span>
+            <span aria-hidden="true" className="h-px w-16 bg-border" />
+            <span aria-hidden="true" className="h-2.5 w-2.5 rounded-full bg-[var(--plan-accent)]" />
           </div>
-          <div className="grid grid-cols-3 gap-3 text-center">
-            <div className="rounded-2xl bg-card px-3 py-4 text-[13px] font-semibold text-fg-soft">{d.from}</div>
-            <div className="rounded-2xl bg-accent px-3 py-4 text-[13px] font-extrabold text-bg">{d.mid}</div>
-            <div className="rounded-2xl bg-card px-3 py-4 text-[13px] font-semibold text-fg-soft">{d.to}</div>
+          <div className="mt-8 grid grid-cols-3 overflow-hidden rounded-[14px] border border-border bg-border text-center text-[13px] font-semibold">
+            <div className="bg-card px-3 py-4 text-fg-soft">{d.from}</div>
+            <div className="bg-card px-3 py-4 text-fg">{d.mid}</div>
+            <div className="bg-card px-3 py-4 text-fg-soft">{d.to}</div>
           </div>
         </div>
-        <p className="relative mt-5 text-center text-[12px] font-semibold uppercase tracking-[0.18em] text-fg-faint">
-          Human-reviewed support for Japan
-        </p>
       </div>
     </section>
   );

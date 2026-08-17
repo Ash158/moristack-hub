@@ -1,20 +1,21 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f8f5ef;
-  --foreground: #1f2328;
-  --muted: #56534b;
-  --muted-soft: #7b7669;
-  --muted-faint: #aaa28f;
-  --border: #ded6c8;
-  --card: #fffdf8;
-  --card-muted: #eee6d8;
-  --accent: #23443a;
-  --accent-2: #b89b5e;
-  --call-accent: #23443a;
-  --call-accent-bg: #e7eee9;
-  --plan-accent: #8b6f3e;
-  --plan-accent-bg: #f2ecdf;
+  --background: #fafbfc;
+  --foreground: #171a1c;
+  --muted: #5b6268;
+  --muted-soft: #737b82;
+  --muted-faint: #93999f;
+  --border: #e1e6ea;
+  --card: #ffffff;
+  --card-muted: #f0f3f6;
+  --accent: #b1502f;
+  --accent-hover: #96401f;
+  --accent-soft: #fbeee7;
+  --call-accent: #3a6ea5;
+  --call-accent-bg: #eaf1f7;
+  --plan-accent: #9a6a24;
+  --plan-accent-bg: #f6efe3;
 }
 
 @theme inline {
@@ -26,20 +27,30 @@
   --color-muted: var(--muted);
   --color-border: var(--border);
   --color-card: var(--card);
+  --color-card-muted: var(--card-muted);
   --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-soft: var(--accent-soft);
   --color-call: var(--call-accent);
   --color-call-bg: var(--call-accent-bg);
   --color-plan: var(--plan-accent);
   --color-plan-bg: var(--plan-accent-bg);
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-inter), Arial, Helvetica, sans-serif;
   --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 html,
 body {
-  background:
-    radial-gradient(circle at top left, rgba(184, 155, 94, 0.18), transparent 32rem),
-    linear-gradient(180deg, #fbf8f1 0%, var(--background) 42%, #f2ece1 100%);
+  margin: 0;
+  background: var(--background);
   color: var(--foreground);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -47,6 +58,7 @@ body {
 }
 
 a {
+  color: inherit;
   text-decoration-thickness: 0.08em;
   text-underline-offset: 0.18em;
 }
@@ -58,6 +70,5 @@ a {
 }
 
 ::selection {
-  background: var(--accent);
-  color: var(--background);
+  background: var(--accent-soft);
 }

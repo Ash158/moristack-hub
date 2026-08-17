@@ -76,13 +76,13 @@ export const CONTACT_EMAIL = "support@moristack.com";
 const JA: PageContent = {
   nav: { services: "Services", about: "About", contact: "Contact" },
   hero: {
-    eyebrow: "MORISTACK / JAPAN TASK SUPPORT",
-    headline: "日本でしか進まない用事を、あなたの代わりに。",
+    eyebrow: "INDEPENDENT JAPAN SERVICE HUB",
+    headline: "日本での用事を、必要なぶんだけ。",
     subhead:
-      "MORISTACKは、日本語での電話、旅程づくり、現地確認など、海外からでは進めにくい日本の実務をサポートします。自動処理ではなく、人が内容を見てから丁寧に進めます。",
+      "MORISTACKは、日本語での電話代行や旅行プラン作成など、海外からでは進めにくい日本の用事を扱う小さなサービスハブです。必要なサービスを選び、人が内容を確認してから進めます。",
     ctaPrimary: "サービスを見る",
     ctaSecondary: "相談する",
-    diagram: { from: "依頼", mid: "確認して対応", to: "前に進む" },
+    diagram: { from: "相談", mid: "確認", to: "対応" },
   },
   about: {
     eyebrow: "ABOUT",
@@ -96,13 +96,13 @@ const JA: PageContent = {
   },
   services: {
     eyebrow: "SERVICES",
-    title: "日本の用事を進める、2つのサービス。",
+    title: "必要なサービスだけを選べます。",
     items: [
       {
         id: "call",
         badge: "CALL",
-        accent: "#23443a",
-        accentBg: "#e7eee9",
+        accent: "#3a6ea5",
+        accentBg: "#eaf1f7",
         title: "日本語の電話を、あなたの代わりに。",
         desc: "レストラン、美容室、役所、公共サービスなど、電話でしか進まない予約・確認・問い合わせを代行します。日本語での細かなやり取りが必要な場面も、人が内容を確認しながら対応します。",
         meta: "1件 $6〜 / 通話完了時のみ課金",
@@ -112,8 +112,8 @@ const JA: PageContent = {
       {
         id: "plan",
         badge: "PLAN",
-        accent: "#8b6f3e",
-        accentBg: "#f2ecdf",
+        accent: "#9a6a24",
+        accentBg: "#f6efe3",
         title: "旅先で迷わない、日本旅行ガイド。",
         desc: "行きたい場所、興味、滞在日数に合わせて、人が調べてカスタムマップと旅行ガイドを作成します。予約代行ではなく、自分のペースで旅を進めたい人のためのプランニングです。",
         meta: "先着3件限定 / 7日以内の旅程は無料",
@@ -128,7 +128,7 @@ const JA: PageContent = {
     body: "対応できること・できないことを事前に確認します。料金や作業範囲を曖昧にしたまま進めず、必要に応じて確認を重ねてから着手します。小さな用事でも、任せる側が安心できる進め方を大切にしています。",
   },
   footer: {
-    tagline: "日本での用事を、静かに前へ進めるサポートサービス。",
+    tagline: "日本での用事を、必要なぶんだけ前へ。",
     callLabel: "CALL",
     planLabel: "PLAN",
     contactLabel: "Contact",
@@ -140,13 +140,13 @@ const JA: PageContent = {
 const EN: PageContent = {
   nav: { services: "Services", about: "About", contact: "Contact" },
   hero: {
-    eyebrow: "MORISTACK / JAPAN TASK SUPPORT",
-    headline: "Japan tasks, handled on your behalf.",
+    eyebrow: "INDEPENDENT JAPAN SERVICE HUB",
+    headline: "Japan tasks, only as much as you need.",
     subhead:
-      "MORISTACK supports the practical things in Japan that are hard to move forward from abroad: Japanese phone calls, trip planning, and local confirmations. A person reviews the details first, then proceeds with care.",
+      "MORISTACK is a small service hub for Japan tasks that are hard to move forward from abroad, including Japanese phone calls and custom trip planning. Choose the service you need; a person reviews the details before anything starts.",
     ctaPrimary: "See services",
     ctaSecondary: "Contact us",
-    diagram: { from: "Request", mid: "Review & act", to: "Resolved" },
+    diagram: { from: "Ask", mid: "Review", to: "Act" },
   },
   about: {
     eyebrow: "ABOUT",
@@ -160,13 +160,13 @@ const EN: PageContent = {
   },
   services: {
     eyebrow: "SERVICES",
-    title: "Two ways to move Japan tasks forward.",
+    title: "Choose only the service you need.",
     items: [
       {
         id: "call",
         badge: "CALL",
-        accent: "#23443a",
-        accentBg: "#e7eee9",
+        accent: "#3a6ea5",
+        accentBg: "#eaf1f7",
         title: "Japanese phone calls, made for you.",
         desc: "For restaurants, salons, city offices, utilities, and other phone-only situations, a Japanese speaker makes the call on your behalf. We handle reservations, confirmations, changes, and simple questions.",
         meta: "From $6 / charged only when the call is completed",
@@ -176,8 +176,8 @@ const EN: PageContent = {
       {
         id: "plan",
         badge: "PLAN",
-        accent: "#8b6f3e",
-        accentBg: "#f2ecdf",
+        accent: "#9a6a24",
+        accentBg: "#f6efe3",
         title: "A Japan guide you can actually use.",
         desc: "Based on your interests, dates, and travel style, we create a custom map and written guide researched by a person. You stay in control of booking and paying, with a clearer plan in hand.",
         meta: "First 3 requests free / trips up to 7 days",
@@ -192,7 +192,7 @@ const EN: PageContent = {
     body: "MORISTACK checks what can and cannot be handled before starting. Scope and pricing are not left vague, and we clarify details when needed so small tasks can move forward with less uncertainty.",
   },
   footer: {
-    tagline: "Japan tasks, quietly moved forward.",
+    tagline: "Japan tasks, only as much as you need.",
     callLabel: "CALL",
     planLabel: "PLAN",
     contactLabel: "Contact",
