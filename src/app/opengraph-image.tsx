@@ -44,7 +44,6 @@ export default async function Image() {
               width: 14,
               height: 14,
               background: "#b1502f",
-              display: "inline-block",
               transform: "rotate(45deg)",
               borderRadius: 2,
             }}
