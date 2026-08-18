@@ -1,7 +1,28 @@
 @import "tailwindcss";
 
+/* BEGIN MORISTACK DESIGN TOKENS — sourced from @moristack/design-tokens */
+/* MORISTACK shared design tokens.
+ *
+ * Import this file once in each MORISTACK product's globals.css (or directly
+ * in the root layout) to apply the brand-wide design system. Tailwind v4 will
+ * expose every `--color-*` token below as a utility class (e.g. `bg-accent`,
+ * `text-fg-soft`).
+ *
+ * Color roles:
+ *   --background  page paper / "off-white"
+ *   --foreground  body ink
+ *   --muted-*     secondary text greys
+ *   --border-*    hairline dividers
+ *   --accent      brand accent (deep navy on the apex)
+ *   --call-*      per-product accent for CALL (blue)
+ *   --plan-*      per-product accent for PLAN (pine)
+ *
+ * The `--accent` token is intentionally shared across the 3 sites so cross-sell
+ * dots, MORISTACK-link footers, and the apex brand always use the same navy.
+ */
+
 :root {
-  /* Brand neutrals — shared across all 3 MORISTACK sites */
+  /* Brand neutrals */
   --background: #fafbfc;
   --foreground: #171a1c;
   --muted: #5b6268;
@@ -12,7 +33,7 @@
   --card: #ffffff;
   --card-muted: #f0f3f6;
 
-  /* Brand accent — shared deep navy (apex / main brand) */
+  /* Brand accent (apex / main brand) */
   --accent: #0f1d3a;
   --accent-hover: #0a1428;
   --accent-deep: #050d1a;
@@ -55,9 +76,12 @@
   --color-plan: var(--plan-accent);
   --color-plan-dark: var(--plan-accent-dark);
   --color-plan-bg: var(--plan-accent-soft);
-  --font-sans: var(--font-jakarta), "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system, "Hiragino Kaku Gothic ProN", "Yu Gothic UI", "Meiryo", sans-serif;
-  --font-mono: var(--font-jakarta-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --font-sans: var(--font-jakarta), "Plus Jakarta Sans", ui-sans-serif, system-ui,
+    -apple-system, "Hiragino Kaku Gothic ProN", "Yu Gothic UI", "Meiryo", sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
 }
+/* END MORISTACK DESIGN TOKENS */
 
 * {
   box-sizing: border-box;
@@ -107,7 +131,6 @@ a {
   color: var(--accent-deep);
 }
 
-/* Subtle hero gradient — deep navy wash fading to paper */
 .hero-wash {
   background:
     radial-gradient(ellipse 60% 50% at 100% 0%, rgba(15, 29, 58, 0.08), transparent 60%),
@@ -115,7 +138,6 @@ a {
     var(--background);
 }
 
-/* Section dividers */
 .divider-soft {
   background: linear-gradient(180deg, transparent 0%, var(--border-soft) 50%, transparent 100%);
   height: 1px;
