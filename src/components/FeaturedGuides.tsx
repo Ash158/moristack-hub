@@ -1,5 +1,6 @@
 import type { Locale } from "@/lib/content";
 import { getContent } from "@/lib/content";
+import { TrackedExternalLink } from "@/components/TrackedExternalLink";
 
 function GuideBadge({ label, color }: { label: string; color: string }) {
   return (
@@ -56,20 +57,24 @@ export function FeaturedGuides({ locale }: { locale: Locale }) {
                 />
                 {locale === "ja" ? "CALL のガイド" : "From CALL"}
               </h3>
-              <a
+              <TrackedExternalLink
                 href="https://call.moristack.com/guides"
+                eventName="cross_sell_click"
+                eventData={{ from: "hub", to: "call", placement: "guides_section" }}
                 target="_blank"
                 rel="noopener"
                 className="text-xs font-bold text-call no-underline hover:underline"
               >
                 {locale === "ja" ? "すべて見る →" : "See all →"}
-              </a>
+              </TrackedExternalLink>
             </div>
             <ul className="grid gap-3">
               {c.guides.callGuides.map((g) => (
                 <li key={g.title}>
-                  <a
+                  <TrackedExternalLink
                     href={g.href}
+                    eventName="cross_sell_click"
+                    eventData={{ from: "hub", to: "call", placement: "guides_section", title: g.title }}
                     target="_blank"
                     rel="noopener"
                     className="group flex items-start gap-3 rounded-[16px] border border-border bg-card p-4 no-underline transition hover:-translate-y-0.5 hover:border-call/40 hover:shadow-[0_10px_30px_-20px_rgba(58,110,165,0.4)]"
@@ -81,7 +86,7 @@ export function FeaturedGuides({ locale }: { locale: Locale }) {
                     <span aria-hidden="true" className="text-fg-faint transition group-hover:text-call">
                       ↗
                     </span>
-                  </a>
+                  </TrackedExternalLink>
                 </li>
               ))}
             </ul>
@@ -97,20 +102,24 @@ export function FeaturedGuides({ locale }: { locale: Locale }) {
                 />
                 {locale === "ja" ? "PLAN のガイド" : "From PLAN"}
               </h3>
-              <a
+              <TrackedExternalLink
                 href="https://plan.moristack.com/guides"
+                eventName="cross_sell_click"
+                eventData={{ from: "hub", to: "plan", placement: "guides_section" }}
                 target="_blank"
                 rel="noopener"
                 className="text-xs font-bold text-plan no-underline hover:underline"
               >
                 {locale === "ja" ? "すべて見る →" : "See all →"}
-              </a>
+              </TrackedExternalLink>
             </div>
             <ul className="grid gap-3">
               {c.guides.planGuides.map((g) => (
                 <li key={g.title}>
-                  <a
+                  <TrackedExternalLink
                     href={g.href}
+                    eventName="cross_sell_click"
+                    eventData={{ from: "hub", to: "plan", placement: "guides_section", title: g.title }}
                     target="_blank"
                     rel="noopener"
                     className="group flex items-start gap-3 rounded-[16px] border border-border bg-card p-4 no-underline transition hover:-translate-y-0.5 hover:border-plan/40 hover:shadow-[0_10px_30px_-20px_rgba(154,106,36,0.4)]"
@@ -122,7 +131,7 @@ export function FeaturedGuides({ locale }: { locale: Locale }) {
                     <span aria-hidden="true" className="text-fg-faint transition group-hover:text-plan">
                       ↗
                     </span>
-                  </a>
+                  </TrackedExternalLink>
                 </li>
               ))}
             </ul>
