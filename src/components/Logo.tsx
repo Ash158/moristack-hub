@@ -3,10 +3,20 @@ import Link from "next/link";
 type LogoSize = "sm" | "md" | "lg";
 type ProductBadge = "HUB" | "CALL" | "PLAN" | null;
 
-const SIZES: Record<LogoSize, { fontSize: number; dotSize: number; gap: number; badgeFont: number; badgePadX: number; badgePadY: number }> = {
-  sm: { fontSize: 17, dotSize: 6, gap: 6, badgeFont: 10, badgePadX: 8, badgePadY: 3 },
-  md: { fontSize: 19, dotSize: 7, gap: 6, badgeFont: 10.5, badgePadX: 8, badgePadY: 3 },
-  lg: { fontSize: 24, dotSize: 8, gap: 7, badgeFont: 11.5, badgePadX: 10, badgePadY: 4 },
+const SIZES: Record<
+  LogoSize,
+  {
+    fontSize: number;
+    diamondSize: number;
+    gap: number;
+    badgeFont: number;
+    badgePadX: number;
+    badgePadY: number;
+  }
+> = {
+  sm: { fontSize: 17, diamondSize: 6, gap: 6, badgeFont: 10, badgePadX: 8, badgePadY: 3 },
+  md: { fontSize: 19, diamondSize: 7, gap: 6, badgeFont: 10.5, badgePadX: 8, badgePadY: 3 },
+  lg: { fontSize: 24, diamondSize: 8, gap: 7, badgeFont: 11.5, badgePadX: 10, badgePadY: 4 },
 };
 
 type Props = {
@@ -14,6 +24,12 @@ type Props = {
   asLink?: boolean;
   badge?: ProductBadge;
   href?: string;
+  /**
+   * CSS variable name for the diamond mark between MORI and STACK.
+   * Each product site uses its own accent (--accent / --call-accent /
+   * --plan-accent) so cross-sell links render the destination's brand color.
+   */
+  diamondColorVar?: string;
 };
 
 export function Logo({
@@ -21,6 +37,7 @@ export function Logo({
   asLink = true,
   badge = "HUB",
   href = "/",
+  diamondColorVar = "var(--accent)",
 }: Props) {
   const s = SIZES[size];
   const inner = (
@@ -33,9 +50,9 @@ export function Logo({
         <span
           aria-hidden="true"
           style={{
-            width: s.dotSize,
-            height: s.dotSize,
-            background: "var(--accent)",
+            width: s.diamondSize,
+            height: s.diamondSize,
+            background: diamondColorVar,
             display: "inline-block",
             borderRadius: "1px",
             transform: "translateY(0.5px) rotate(45deg)",

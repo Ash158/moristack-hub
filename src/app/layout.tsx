@@ -57,7 +57,7 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   icons: {
-    icon: "/favicon.ico",
+    icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
   },
 };
 
