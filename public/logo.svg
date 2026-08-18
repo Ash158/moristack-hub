@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 80" width="360" height="80">
+  <title>MORISTACK</title>
+  <style>
+    .wm-mori { font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui, -apple-system, 'Hiragino Kaku Gothic ProN', 'Yu Gothic UI', 'Meiryo', sans-serif; font-weight: 500; }
+    .wm-stack { font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui, -apple-system, 'Hiragino Kaku Gothic ProN', 'Yu Gothic UI', 'Meiryo', sans-serif; font-weight: 800; }
+    .wm-badge { font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui, -apple-system, 'Hiragino Kaku Gothic ProN', 'Yu Gothic UI', 'Meiryo', sans-serif; font-weight: 800; letter-spacing: 0.14em; }
+  </style>
+  <text x="0" y="40" class="wm-mori" font-size="30" fill="#171a1c">MORI</text>
+  <rect x="65" y="22" width="18" height="18" rx="1.5" transform="rotate(45 74 31)" fill="#0f1d3a"/>
+  <text x="92" y="40" class="wm-stack" font-size="30" fill="#171a1c">STACK</text>
+  <rect x="245" y="22" width="70" height="22" rx="11" fill="#e8eef7"/>
+  <text x="280" y="38" class="wm-badge" font-size="12" fill="#0f1d3a" text-anchor="middle">HUB</text>
+</svg>
