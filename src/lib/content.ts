@@ -227,9 +227,9 @@ const JA: PageContent = {
   },
   founder: {
     eyebrow: "COMPANY",
-    title: "実務に寄ったオペレーション会社。",
-    body: "MORISTACKは、日本国内に登記のある法人として、海外から日本の実務を進めたい方のオペレーションを引き受けています。日本語の電話対応と旅行プランニングを軸に、対応範囲・料金・所要時間を依頼前にお知らせし、進めてよいと判断したものだけお受けしています。",
-    address: "MORISTACK Inc. · Osaka, Japan",
+    title: "実務に寄ったオペレーションチーム。",
+    body: "MORISTACKは、海外から日本の実務を進めたい方のための小さなオペレーションチームです。日本語の電話対応と旅行プランニングを軸に、対応範囲・料金・所要時間を依頼前にお知らせし、進めてよいと判断したものだけお受けしています。",
+    address: "MORISTACK",
   },
   footer: {
     tagline: "日本での用事を、必要なぶんだけ前へ。",
@@ -368,9 +368,9 @@ const EN: PageContent = {
   },
   founder: {
     eyebrow: "COMPANY",
-    title: "A focused operations company, based in Japan.",
-    body: "MORISTACK is a company registered in Japan that handles practical operations for clients working with Japan from overseas. We focus on Japanese phone-based arrangements and custom trip guides, and only take on requests we can complete within the scope, price, and timeline we confirm up front.",
-    address: "MORISTACK Inc. · Osaka, Japan",
+    title: "A small operations team, based in Japan.",
+    body: "MORISTACK is a small operations team for clients working with Japan from overseas. We focus on Japanese phone-based arrangements and custom trip guides, and only take on requests we can complete within the scope, price, and timeline we confirm up front.",
+    address: "MORISTACK",
   },
   footer: {
     tagline: "Japan tasks, only as much as you need.",

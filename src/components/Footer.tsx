@@ -99,9 +99,7 @@ export function Footer({ locale }: { locale: Locale }) {
         </div>
 
         <div className="mt-10 flex flex-col items-start justify-between gap-3 border-t border-border-soft pt-6 text-xs text-fg-soft sm:flex-row sm:items-center">
-          <p>
-            © {year} MORISTACK Inc. {locale === "ja" ? "本社：大阪、日本。" : "Headquartered in Osaka, Japan."}
-          </p>
+          <p>© {year} MORISTACK</p>
           <p>
             {locale === "ja"
               ? "海外から日本の用事を前へ。"
