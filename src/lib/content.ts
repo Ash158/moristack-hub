@@ -112,7 +112,7 @@ const JA: PageContent = {
     kicker: "MORISTACK, made workable.",
     headline: "日本での用事を、確実に、必要ぶんだけ。",
     subhead:
-      "MORISTACKは、海外からでは進めにくい日本の実務だけを扱う小さなオペレーションパートナーです。日本語の電話、旅行プランニング。必要なサービスだけを選び、人が内容を確認してから動きます。",
+      "MORISTACKは、海外からでは進めにくい日本の実務だけを扱う独立系のオペレーションです。必要なサービスだけを選び、人が内容を確認してから動きます。",
     ctaPrimary: "サービスを見る",
     ctaSecondary: "相談してみる",
     diagram: {
@@ -147,8 +147,8 @@ const JA: PageContent = {
   },
   services: {
     eyebrow: "SERVICES",
-    title: "今は2つのサービスを運営しています。",
-    body: "どちらも独立した別サイトで運用中。下のリンクからそれぞれのサービスページへ。",
+    title: "必要なサービスだけ、個別に。",
+    body: "それぞれ独立した別サイトで運用中。下のリンクからそれぞれのサービスページへ。",
     items: [
       {
         id: "call",
@@ -227,8 +227,8 @@ const JA: PageContent = {
   },
   founder: {
     eyebrow: "COMPANY",
-    title: "実務に寄ったオペレーションチーム。",
-    body: "MORISTACKは、海外から日本の実務を進めたい方のための小さなオペレーションチームです。日本語の電話対応と旅行プランニングを軸に、対応範囲・料金・所要時間を依頼前にお知らせし、進めてよいと判断したものだけお受けしています。",
+    title: "実務に寄ったオペレーション。",
+    body: "MORISTACKは、海外から日本の実務を進めたい方のために運営しています。日本語の電話対応と旅行プランニングを軸に、対応範囲・料金・所要時間を依頼前にお知らせし、進めてよいと判断したものだけお受けしています。",
     address: "MORISTACK",
   },
   footer: {
@@ -253,7 +253,7 @@ const EN: PageContent = {
     kicker: "MORISTACK, made workable.",
     headline: "Japan tasks, made workable.",
     subhead:
-      "MORISTACK is a small operations partner for Japan tasks that are hard to move forward from abroad — Japanese phone calls and custom trip guides. Pick the service you need; a person reviews the details before anything starts.",
+      "MORISTACK is an independent operations partner for Japan tasks that are hard to move forward from abroad. Pick the service you need; a person reviews the details before anything starts.",
     ctaPrimary: "See services",
     ctaSecondary: "Get in touch",
     diagram: {
@@ -288,7 +288,7 @@ const EN: PageContent = {
   },
   services: {
     eyebrow: "SERVICES",
-    title: "Two independent services, one company.",
+    title: "Independent services, one brand.",
     body: "Each runs on its own site. Click through for full pricing, FAQs, and request forms.",
     items: [
       {
@@ -368,8 +368,8 @@ const EN: PageContent = {
   },
   founder: {
     eyebrow: "COMPANY",
-    title: "A small operations team, based in Japan.",
-    body: "MORISTACK is a small operations team for clients working with Japan from overseas. We focus on Japanese phone-based arrangements and custom trip guides, and only take on requests we can complete within the scope, price, and timeline we confirm up front.",
+    title: "Operations for the practical side of Japan.",
+    body: "MORISTACK is operated for clients working with Japan from overseas. We focus on Japanese phone-based arrangements and custom trip guides, and only take on requests we can complete within the scope, price, and timeline we confirm up front.",
     address: "MORISTACK",
   },
   footer: {

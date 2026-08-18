@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "MORISTACK — Operations for the practical side of Japan",
     description:
-      "Independent operations for the practical side of Japan: CALL, PLAN.",
+      "Independent operations for the practical side of Japan.",
   },
   robots: { index: true, follow: true },
   icons: {

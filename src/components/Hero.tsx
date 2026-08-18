@@ -122,13 +122,13 @@ function TrustStrip({ locale }: { locale: Locale }) {
       ? [
           { label: "人が確認", note: "人が依頼内容を読んで着手" },
           { label: "明朗会計", note: "範囲と料金を先に提示" },
-          { label: "日本登記の法人", note: "日本国内に法人登記済み" },
+          { label: "MORISTACK", note: "日本のお客様向けに運営" },
           { label: "完了時のみ課金", note: "CALLは通話を完了して初めて請求" },
         ]
       : [
           { label: "Human-reviewed", note: "A person reads your request first" },
           { label: "Up-front pricing", note: "Scope and cost confirmed before work" },
-          { label: "Registered in Japan", note: "Officially incorporated in Japan" },
+          { label: "MORISTACK", note: "Operated as MORISTACK" },
           { label: "Pay on completion", note: "CALL only bills when the call is made" },
         ];
   return (
