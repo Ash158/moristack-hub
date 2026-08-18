@@ -75,8 +75,8 @@ export function Footer({ locale }: { locale: Locale }) {
                 </a>
                 <p className="mt-1 pl-4 text-xs leading-relaxed text-fg-soft">
                   {locale === "ja"
-                    ? "人が作る日本旅行ガイド"
-                    : "Custom Japan trip guides, by a person"}
+                    ? "公開情報をもとに組み立てる日本旅行ガイド"
+                    : "Custom Japan trip guides, researched end-to-end"}
                 </p>
               </li>
             </ul>

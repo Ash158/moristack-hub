@@ -103,7 +103,7 @@ export const CONTACT_EMAIL = "support@moristack.com";
 const JA: PageContent = {
   nav: {
     services: "サービス",
-    about: "について",
+    about: "MORISTACK とは",
     contact: "相談",
     guides: "ガイド",
   },
@@ -112,7 +112,7 @@ const JA: PageContent = {
     kicker: "MORISTACK, made workable.",
     headline: "日本での用事を、確実に、必要ぶんだけ。",
     subhead:
-      "MORISTACKは、海外からでは進めにくい日本の実務だけを扱う独立系のオペレーションです。必要なサービスだけを選び、人が内容を確認してから動きます。",
+      "MORISTACKは、海外からでは進めにくい日本の実務だけを扱う独立系のオペレーションです。必要なサービスだけを選び、内容を確認したうえで進めます。",
     ctaPrimary: "サービスを見る",
     ctaSecondary: "相談してみる",
     diagram: {
@@ -130,8 +130,8 @@ const JA: PageContent = {
     principles: [
       {
         num: "01",
-        title: "人が確認してから対応",
-        desc: "依頼内容を読み、不明点があれば着手前に確認します。テンプレートで返しません。",
+        title: "内容を確認してから対応",
+        desc: "依頼内容を読み、不明点があれば着手前に確認します。テンプレートでは返しません。",
       },
       {
         num: "02",
@@ -173,14 +173,14 @@ const JA: PageContent = {
         productName: "MORISTACK PLAN",
         accentVar: "--plan-accent",
         accentSoftVar: "--plan-accent-soft",
-        title: "旅の設計図を、人がつくります。",
-        desc: "行きたい場所、興味、滞在日数に合わせて、人が調べてカスタムマップと旅行ガイドをお渡しします。予約代行ではなく、自分のペースで旅を組みたい人のためのプランニングです。",
+        title: "旅の設計図をお返しします。",
+        desc: "行きたい場所、興味、滞在日数に合わせて、公開情報をもとにカスタムマップと旅行ガイドをお渡しします。予約代行ではなく、自分のペースで旅を組みたい人のためのプランニングです。",
         bullets: [
           "カスタムマップ + 文字ガイド",
           "予約・決済はあなた自身",
-          "7日間以内の旅程は無料対応中",
+          "最大4泊5日の旅程は無料対応中",
         ],
-        meta: "先着3件限定 / 7日以内無料",
+        meta: "先着3件限定 / 最大4泊5日",
         url: "https://plan.moristack.com",
         cta: "MORISTACK PLAN を開く",
       },
@@ -244,7 +244,7 @@ const JA: PageContent = {
 const EN: PageContent = {
   nav: {
     services: "Services",
-    about: "About",
+    about: "About MORISTACK",
     contact: "Contact",
     guides: "Guides",
   },
@@ -266,7 +266,7 @@ const EN: PageContent = {
   },
   about: {
     eyebrow: "ABOUT",
-    title: "Reviewed by a person, one request at a time.",
+    title: "Reviewed up front, one request at a time.",
     body: "Reservations, confirmations, questions, and trip planning often need Japanese and local context. MORISTACK handles those tasks carefully, with clarification where needed — a quiet operations partner for getting things done in Japan.",
     principles: [
       {
@@ -314,14 +314,14 @@ const EN: PageContent = {
         productName: "MORISTACK PLAN",
         accentVar: "--plan-accent",
         accentSoftVar: "--plan-accent-soft",
-        title: "A Japan trip guide, researched by a person.",
-        desc: "Based on your interests, dates, and travel style, a custom map and a written guide researched by a person. You stay in control of booking and paying — with a clearer plan in hand.",
+        title: "A Japan trip guide, researched end-to-end.",
+        desc: "Based on your interests, dates, and travel style, a custom map and a written guide researched end-to-end. You stay in control of booking and paying — with a clearer plan in hand.",
         bullets: [
           "Custom map + written guide",
           "You handle all bookings and payments",
-          "Trips up to 7 days are free during launch",
+          "Trips up to 4 nights / 5 days are free during launch",
         ],
-        meta: "First 3 requests free / trips up to 7 days",
+        meta: "First 3 requests free / trips up to 4 nights / 5 days",
         url: "https://plan.moristack.com",
         cta: "Open MORISTACK PLAN",
       },
