@@ -17,6 +17,14 @@ export async function generateMetadata({
       locale === "ja"
         ? "MORISTACK へのお問い合わせはこちらから。"
         : "Get in touch with MORISTACK.",
+    alternates: {
+      canonical: `/${locale}/contact`,
+      languages: {
+        ja: "/ja/contact",
+        en: "/en/contact",
+        "x-default": "/en/contact",
+      },
+    },
   };
 }
 

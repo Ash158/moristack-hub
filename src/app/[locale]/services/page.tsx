@@ -16,6 +16,14 @@ export async function generateMetadata({
   return {
     title: c.services.title,
     description: c.services.items.map((s) => s.title).join(" / "),
+    alternates: {
+      canonical: `/${locale}/services`,
+      languages: {
+        ja: "/ja/services",
+        en: "/en/services",
+        "x-default": "/en/services",
+      },
+    },
   };
 }
 

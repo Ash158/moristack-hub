@@ -17,6 +17,14 @@ export async function generateMetadata({
   return {
     title: c.about.title,
     description: c.about.body,
+    alternates: {
+      canonical: `/${locale}/about`,
+      languages: {
+        ja: "/ja/about",
+        en: "/en/about",
+        "x-default": "/en/about",
+      },
+    },
   };
 }
 
