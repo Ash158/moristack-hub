@@ -17,7 +17,17 @@ const organizationJsonLd = (locale: Locale) => {
     url: SITE_URL,
     logo: `${SITE_URL}/logo.svg`,
     description: c.hero.subhead,
-    sameAs: [],
+    sameAs: [
+      "https://call.moristack.com",
+      "https://plan.moristack.com",
+    ],
+    areaServed: { "@type": "Country", name: "Japan" },
+    knowsAbout: [
+      "Japanese phone-call concierge",
+      "Japan travel planning",
+      "Phone-only restaurant reservations in Japan",
+      "Hotel and ryokan booking by phone",
+    ],
     contactPoint: [
       {
         "@type": "ContactPoint",
@@ -28,6 +38,19 @@ const organizationJsonLd = (locale: Locale) => {
     ],
   };
 };
+
+const websiteJsonLd = (locale: Locale) => ({
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "MORISTACK",
+  url: SITE_URL,
+  inLanguage: locale,
+  publisher: {
+    "@type": "Organization",
+    name: "MORISTACK",
+    url: SITE_URL,
+  },
+});
 
 export async function generateStaticParams() {
   return LOCALES.map((locale) => ({ locale }));
@@ -79,6 +102,12 @@ export default async function LocaleLayout({
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(organizationJsonLd(typedLocale)),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(websiteJsonLd(typedLocale)),
         }}
       />
       <TopNav locale={typedLocale} />
