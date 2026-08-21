@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
-import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { TopNav } from "@/components/TopNav";
 import { Footer } from "@/components/Footer";
+import { AnalyticsWithQaExclusion } from "@/components/AnalyticsWithQaExclusion";
 import { content, CONTACT_EMAIL } from "@/lib/content";
 import "./globals.css";
 
@@ -138,7 +138,7 @@ export default function RootLayout({
         <div id="contact">
           <Footer />
         </div>
-        <Analytics />
+        <AnalyticsWithQaExclusion />
         <SpeedInsights />
       </body>
     </html>
