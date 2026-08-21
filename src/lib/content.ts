@@ -1,6 +1,3 @@
-export type Locale = "ja" | "en";
-export const LOCALES: Locale[] = ["ja", "en"];
-
 export type NavCopy = {
   services: string;
   about: string;
@@ -38,11 +35,24 @@ export type AboutCopy = {
 };
 
 export type ServiceItemCopy = {
-  id: "call" | "plan";
+  id: "call" | "plan" | "poko";
   badge: string;
   productName: string;
-  accentVar: "--call-accent" | "--plan-accent";
-  accentSoftVar: "--call-accent-soft" | "--plan-accent-soft";
+  accentVar:
+    | "--call-accent"
+    | "--plan-accent"
+    | "--poko-accent";
+  accentSoftVar:
+    | "--call-accent-soft"
+    | "--plan-accent-soft"
+    | "--poko-accent-soft";
+  /**
+   * Set to "ja" when the linked service is Japanese-only.
+   * Drives the language badge on the Services card with a `lang="ja"`
+   * attribute. English-language services (CALL, PLAN) leave this
+   * undefined.
+   */
+  serviceLanguage?: "ja";
   title: string;
   desc: string;
   bullets: string[];
@@ -83,6 +93,7 @@ export type FooterCopy = {
   tagline: string;
   callLabel: string;
   planLabel: string;
+  pokoLabel: string;
   contactLabel: string;
   copyright: string;
 };
@@ -100,148 +111,7 @@ export type PageContent = {
 
 export const CONTACT_EMAIL = "support@moristack.com";
 
-const JA: PageContent = {
-  nav: {
-    services: "サービス",
-    about: "MORISTACK とは",
-    contact: "相談",
-    guides: "ガイド",
-  },
-  hero: {
-    eyebrow: "INDIVIDUAL JAPAN OPERATIONS",
-    kicker: "MORISTACK, made workable.",
-    headline: "日本での用事を、確実に、必要ぶんだけ。",
-    subhead:
-      "MORISTACKは、海外からでは進めにくい日本の実務だけを扱う独立系のオペレーションです。必要なサービスだけを選び、内容を確認したうえで進めます。",
-    ctaPrimary: "サービスを見る",
-    ctaSecondary: "相談してみる",
-    diagram: {
-      caption: "依頼から完了まで",
-      from: "依頼",
-      mid: "MORISTACK",
-      to: "完了",
-      note: "着手前に内容と料金を確認。無理な依頼には着手せず、進められる範囲だけをお伝えします。",
-    },
-  },
-  about: {
-    eyebrow: "ABOUT",
-    title: "一件ずつ、内容を見てから進めます。",
-    body: "予約、確認、問い合わせ、旅行計画。日本語と現地感覚が必要なタスクを、急がず確認を挟みながら扱います。便利屋ではなく、海外から日本の用事を進めるための実務パートナーです。",
-    principles: [
-      {
-        num: "01",
-        title: "内容を確認してから対応",
-        desc: "依頼内容を読み、不明点があれば着手前に確認します。テンプレートでは返しません。",
-      },
-      {
-        num: "02",
-        title: "料金と範囲を先に明確に",
-        desc: "何をどこまで行うか、費用はいくらかを事前にお知らせします。曖昧な課金はしません。",
-      },
-      {
-        num: "03",
-        title: "必要なサービスだけを選べる",
-        desc: "電話代行、旅行プランニングは別サービス。目的に合わせて個別に利用できます。",
-      },
-    ],
-  },
-  services: {
-    eyebrow: "SERVICES",
-    title: "必要なサービスだけ、個別に。",
-    body: "それぞれ独立した別サイトで運用中。下のリンクからそれぞれのサービスページへ。",
-    items: [
-      {
-        id: "call",
-        badge: "CALL",
-        productName: "MORISTACK CALL",
-        accentVar: "--call-accent",
-        accentSoftVar: "--call-accent-soft",
-        title: "日本語の電話、あなたの代わりに。",
-        desc: "レストラン、美容室、役所、公共料金、ライフラインなど、電話でしか進まない場面を日本語で代行。新規予約、確認、変更、簡単な問い合わせに対応します。",
-        bullets: [
-          "新規予約・変更・確認・質問",
-          "通話完了まで課金なし",
-          "Stripeで安全にカード登録",
-        ],
-        meta: "1件 $6〜 / 通話完了時のみ課金",
-        url: "https://call.moristack.com",
-        cta: "日本語で電話を代行する →",
-      },
-      {
-        id: "plan",
-        badge: "PLAN",
-        productName: "MORISTACK PLAN",
-        accentVar: "--plan-accent",
-        accentSoftVar: "--plan-accent-soft",
-        title: "旅の設計図をお返しします。",
-        desc: "行きたい場所、興味、滞在日数に合わせて、公開情報をもとにカスタムマップと旅行ガイドをお渡しします。予約代行ではなく、自分のペースで旅を組みたい人のためのプランニングです。",
-        bullets: [
-          "カスタムマップ + 文字ガイド",
-          "予約・決済はあなた自身",
-          "最大4泊5日の旅程は無料対応中",
-        ],
-        meta: "先着3件限定 / 最大4泊5日",
-        url: "https://plan.moristack.com",
-        cta: "日本旅行を計画する →",
-      },
-    ],
-  },
-  guides: {
-    eyebrow: "PRACTICAL GUIDES",
-    title: "依頼の前に、知っておくと助かること。",
-    body: "各サービスに、日本で実際に使う場面で押さえておきたいポイントをまとめたガイドがあります。",
-    callGuides: [
-      {
-        badge: "CALL",
-        title: "日本のレストランを電話予約する手順",
-        href: "https://call.moristack.com/guides",
-      },
-      {
-        badge: "CALL",
-        title: "ホテル・旅館への電話で確認すべきこと",
-        href: "https://call.moristack.com/guides",
-      },
-      {
-        badge: "CALL",
-        title: "公共料金・ライフラインの問い合わせ英語訳",
-        href: "https://call.moristack.com/guides",
-      },
-    ],
-    planGuides: [
-      {
-        badge: "PLAN",
-        title: "日本旅行、eSIMとポケットWi-Fiは結局どれか",
-        href: "https://plan.moristack.com/guides",
-      },
-      {
-        badge: "PLAN",
-        title: "ジャパンレールパス、今も必要か",
-        href: "https://plan.moristack.com/guides",
-      },
-      {
-        badge: "PLAN",
-        title: "荷物を預ける場所の選び方",
-        href: "https://plan.moristack.com/guides",
-      },
-    ],
-  },
-  founder: {
-    eyebrow: "COMPANY",
-    title: "実務に寄ったオペレーション。",
-    body: "MORISTACKは、海外から日本の実務を進めたい方のために運営しています。日本語の電話対応と旅行プランニングを軸に、対応範囲・料金・所要時間を依頼前にお知らせし、進めてよいと判断したものだけお受けしています。",
-    address: "MORISTACK",
-  },
-  footer: {
-    tagline: "日本での用事を、必要なぶんだけ前へ。",
-    callLabel: "CALL",
-    planLabel: "PLAN",
-    contactLabel: "Contact",
-    copyright: "© 2026 MORISTACK",
-  },
-  contactEmail: CONTACT_EMAIL,
-};
-
-const EN: PageContent = {
+export const content: PageContent = {
   nav: {
     services: "Services",
     about: "About MORISTACK",
@@ -289,7 +159,7 @@ const EN: PageContent = {
   services: {
     eyebrow: "SERVICES",
     title: "Independent services, one brand.",
-    body: "Each runs on its own site. Click through for full pricing, FAQs, and request forms.",
+    body: "Each runs on its own site. CALL and PLAN are in English; POKO is a Japanese-language service for families in Japan.",
     items: [
       {
         id: "call",
@@ -324,6 +194,24 @@ const EN: PageContent = {
         meta: "First 3 requests free / trips up to 4 nights / 5 days",
         url: "https://plan.moristack.com",
         cta: "Plan a Japan trip →",
+      },
+      {
+        id: "poko",
+        badge: "POKO",
+        productName: "MORISTACK POKO",
+        accentVar: "--poko-accent",
+        accentSoftVar: "--poko-accent-soft",
+        serviceLanguage: "ja",
+        title: "An AI tutor children actually talk to.",
+        desc: "A voice-first AI tutor for children in Japan. It gives staged hints instead of handing over the answer, practises English conversation in real time, and keeps study records only with a parent's consent. Built for the Japanese school curriculum, and offered entirely in Japanese.",
+        bullets: [
+          "Staged hints, never the answer straight away",
+          "Real-time Japanese and English voice practice",
+          "Parent-controlled records, up to 5 children",
+        ],
+        meta: "Japanese-language service",
+        url: "https://poko.moristack.com",
+        cta: "See POKO (in Japanese) →",
       },
     ],
   },
@@ -376,18 +264,9 @@ const EN: PageContent = {
     tagline: "Japan tasks, only as much as you need.",
     callLabel: "CALL",
     planLabel: "PLAN",
+    pokoLabel: "POKO",
     contactLabel: "Contact",
     copyright: "© 2026 MORISTACK",
   },
   contactEmail: CONTACT_EMAIL,
 };
-
-const CONTENT: Record<Locale, PageContent> = { ja: JA, en: EN };
-
-export function getContent(locale: Locale): PageContent {
-  return CONTENT[locale];
-}
-
-export function isLocale(value: string): value is Locale {
-  return (LOCALES as readonly string[]).includes(value);
-}

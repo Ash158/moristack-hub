@@ -2,7 +2,56 @@ import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { TopNav } from "@/components/TopNav";
+import { Footer } from "@/components/Footer";
+import { content, CONTACT_EMAIL } from "@/lib/content";
 import "./globals.css";
+
+const SITE_URL = "https://moristack.com";
+
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "MORISTACK",
+  alternateName: "MORI STACK",
+  url: SITE_URL,
+  logo: `${SITE_URL}/logo.svg`,
+  description: content.hero.subhead,
+  sameAs: [
+    "https://call.moristack.com",
+    "https://plan.moristack.com",
+    "https://poko.moristack.com",
+  ],
+  areaServed: { "@type": "Country", name: "Japan" },
+  knowsAbout: [
+    "Japanese phone-call concierge",
+    "Japan travel planning",
+    "Phone-only restaurant reservations in Japan",
+    "Hotel and ryokan booking by phone",
+    "AI tutoring for children in Japan",
+  ],
+  contactPoint: [
+    {
+      "@type": "ContactPoint",
+      contactType: "customer support",
+      email: CONTACT_EMAIL,
+      availableLanguage: ["en", "ja"],
+    },
+  ],
+};
+
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "MORISTACK",
+  url: SITE_URL,
+  inLanguage: "en",
+  publisher: {
+    "@type": "Organization",
+    name: "MORISTACK",
+    url: SITE_URL,
+  },
+};
 
 const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -12,7 +61,7 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://moristack.com"),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "MORISTACK",
     template: "%s · MORISTACK",
@@ -20,32 +69,26 @@ export const metadata: Metadata = {
   description:
     "MORISTACK — a small, considered operations partner for the practical side of Japan. CALL for Japanese phone calls, PLAN for custom Japan trip guides.",
   applicationName: "MORISTACK",
-  authors: [{ name: "MORISTACK", url: "https://moristack.com" }],
+  authors: [{ name: "MORISTACK", url: SITE_URL }],
   generator: "Next.js",
   keywords: [
     "MORISTACK",
     "Japan",
     "CALL",
     "PLAN",
-    "電話代行",
-    "旅行プランニング",
+    "POKO",
     "Japan phone call",
     "Japan trip planning",
   ],
   alternates: {
     canonical: "/",
-    languages: {
-      ja: "/ja",
-      en: "/en",
-      "x-default": "/en",
-    },
   },
   openGraph: {
     siteName: "MORISTACK",
     title: "MORISTACK — Operations for the practical side of Japan",
     description:
       "An independent operations partner for Japan tasks that are hard to move forward from abroad — Japanese phone calls and custom trip guides.",
-    url: "https://moristack.com",
+    url: SITE_URL,
     locale: "en_US",
     type: "website",
     images: [
@@ -78,7 +121,23 @@ export default function RootLayout({
   return (
     <html lang="en" className={`h-full antialiased ${jakarta.variable}`}>
       <body className="min-h-full flex flex-col bg-bg text-fg font-sans">
-        {children}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationJsonLd),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(websiteJsonLd),
+          }}
+        />
+        <TopNav />
+        <main className="flex-1">{children}</main>
+        <div id="contact">
+          <Footer />
+        </div>
         <Analytics />
         <SpeedInsights />
       </body>

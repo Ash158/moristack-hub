@@ -1,8 +1,7 @@
-import type { Locale } from "@/lib/content";
-import { getContent } from "@/lib/content";
+import { content } from "@/lib/content";
 
-export function About({ locale }: { locale: Locale }) {
-  const c = getContent(locale);
+export function About() {
+  const c = content;
 
   return (
     <section id="about" className="border-y border-border bg-card">
@@ -17,7 +16,7 @@ export function About({ locale }: { locale: Locale }) {
               {c.about.body}
             </p>
           </div>
-          <ol className="grid gap-4" aria-label={locale === "ja" ? "MORISTACKの3つの原則" : "Three MORISTACK principles"}>
+          <ol className="grid gap-4" aria-label="Three MORISTACK principles">
             {c.about.principles.map((p) => (
               <li
                 key={p.num}
