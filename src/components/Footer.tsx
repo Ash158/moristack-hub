@@ -1,9 +1,8 @@
 import { Logo } from "@/components/Logo";
-import type { Locale } from "@/lib/content";
-import { getContent } from "@/lib/content";
+import { content } from "@/lib/content";
 
-export function Footer({ locale }: { locale: Locale }) {
-  const c = getContent(locale);
+export function Footer() {
+  const c = content;
   const year = new Date().getFullYear();
 
   return (
@@ -48,9 +47,7 @@ export function Footer({ locale }: { locale: Locale }) {
                   </span>
                 </a>
                 <p className="mt-1 pl-4 text-xs leading-relaxed text-fg-soft">
-                  {locale === "ja"
-                    ? "日本語の電話を代行"
-                    : "Japanese phone calls, made for you"}
+                  Japanese phone calls, made for you
                 </p>
               </li>
               <li>
@@ -74,9 +71,7 @@ export function Footer({ locale }: { locale: Locale }) {
                   </span>
                 </a>
                 <p className="mt-1 pl-4 text-xs leading-relaxed text-fg-soft">
-                  {locale === "ja"
-                    ? "公開情報をもとに組み立てる日本旅行ガイド"
-                    : "Custom Japan trip guides, researched end-to-end"}
+                  Custom Japan trip guides, researched end-to-end
                 </p>
               </li>
             </ul>
@@ -100,11 +95,7 @@ export function Footer({ locale }: { locale: Locale }) {
 
         <div className="mt-10 flex flex-col items-start justify-between gap-3 border-t border-border-soft pt-6 text-xs text-fg-soft sm:flex-row sm:items-center">
           <p>© {year} MORISTACK</p>
-          <p>
-            {locale === "ja"
-              ? "海外から日本の用事を前へ。"
-              : "Moving Japan tasks forward, from abroad."}
-          </p>
+          <p>Moving Japan tasks forward, from abroad.</p>
         </div>
       </div>
     </footer>

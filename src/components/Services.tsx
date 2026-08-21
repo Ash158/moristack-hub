@@ -1,9 +1,8 @@
 import type { CSSProperties } from "react";
-import type { Locale } from "@/lib/content";
-import { getContent } from "@/lib/content";
+import { content } from "@/lib/content";
 
-export function Services({ locale }: { locale: Locale }) {
-  const c = getContent(locale);
+export function Services() {
+  const c = content;
 
   return (
     <section id="services" className="bg-bg px-6 py-20 sm:py-24">

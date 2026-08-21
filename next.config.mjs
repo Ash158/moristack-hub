@@ -11,6 +11,17 @@ const nextConfig = {
         destination: "https://moristack.com/:path*",
         permanent: true,
       },
+      // English-only rollout (2026-08-20): /ja|/en prefix → no prefix
+      {
+        source: "/:locale(ja|en)",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/:locale(ja|en)/:path*",
+        destination: "/:path*",
+        permanent: true,
+      },
     ];
   },
 };

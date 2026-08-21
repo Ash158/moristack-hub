@@ -1,5 +1,4 @@
-import type { Locale } from "@/lib/content";
-import { getContent } from "@/lib/content";
+import { content } from "@/lib/content";
 
 function CompanyMark() {
   return (
@@ -55,9 +54,8 @@ function CompanyMark() {
   );
 }
 
-export function Founder({ locale }: { locale: Locale }) {
-  const c = getContent(locale);
-  const contactLabel = locale === "ja" ? "メールで相談" : "Email us";
+export function Founder() {
+  const c = content;
 
   return (
     <section
@@ -95,7 +93,7 @@ export function Founder({ locale }: { locale: Locale }) {
               href={`mailto:${c.contactEmail}`}
               className="ml-auto inline-flex items-center gap-2 rounded-full border border-fg/15 bg-card px-5 py-2.5 font-bold text-fg no-underline transition hover:border-fg hover:bg-fg hover:text-card"
             >
-              {contactLabel}
+              Email us
               <span aria-hidden="true">→</span>
             </a>
           </div>

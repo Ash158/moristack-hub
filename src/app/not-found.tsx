@@ -18,19 +18,13 @@ export default function NotFound() {
             href="/"
             className="rounded-full border border-fg bg-fg px-5 py-2.5 text-sm font-semibold text-bg transition hover:bg-fg/90"
           >
-            Choose language
+            Back to home
           </Link>
           <Link
-            href="/en"
+            href="/#services"
             className="rounded-full border border-border bg-card px-5 py-2.5 text-sm font-semibold text-fg transition hover:border-fg"
           >
-            English home
-          </Link>
-          <Link
-            href="/ja"
-            className="rounded-full border border-border bg-card px-5 py-2.5 text-sm font-semibold text-fg transition hover:border-fg"
-          >
-            日本語ホーム
+            See services
           </Link>
         </div>
       </div>

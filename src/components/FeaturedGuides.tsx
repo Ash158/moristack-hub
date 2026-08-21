@@ -1,5 +1,4 @@
-import type { Locale } from "@/lib/content";
-import { getContent } from "@/lib/content";
+import { content } from "@/lib/content";
 import { TrackedExternalLink } from "@/components/TrackedExternalLink";
 
 function GuideBadge({ label, color }: { label: string; color: string }) {
@@ -21,8 +20,8 @@ function GuideBadge({ label, color }: { label: string; color: string }) {
   );
 }
 
-export function FeaturedGuides({ locale }: { locale: Locale }) {
-  const c = getContent(locale);
+export function FeaturedGuides() {
+  const c = content;
   const callColor = "var(--call-accent)";
   const planColor = "var(--plan-accent)";
 
@@ -55,7 +54,7 @@ export function FeaturedGuides({ locale }: { locale: Locale }) {
                   className="inline-block h-2 w-2 rounded-full"
                   style={{ background: callColor }}
                 />
-                {locale === "ja" ? "CALL のガイド" : "From CALL"}
+                From CALL
               </h3>
               <TrackedExternalLink
                 href="https://call.moristack.com/guides"
@@ -65,7 +64,7 @@ export function FeaturedGuides({ locale }: { locale: Locale }) {
                 rel="noopener"
                 className="text-xs font-bold text-call no-underline hover:underline"
               >
-                {locale === "ja" ? "すべて見る →" : "See all →"}
+                See all →
               </TrackedExternalLink>
             </div>
             <ul className="grid gap-3">
@@ -100,7 +99,7 @@ export function FeaturedGuides({ locale }: { locale: Locale }) {
                   className="inline-block h-2 w-2 rounded-full"
                   style={{ background: planColor }}
                 />
-                {locale === "ja" ? "PLAN のガイド" : "From PLAN"}
+                From PLAN
               </h3>
               <TrackedExternalLink
                 href="https://plan.moristack.com/guides"
@@ -110,7 +109,7 @@ export function FeaturedGuides({ locale }: { locale: Locale }) {
                 rel="noopener"
                 className="text-xs font-bold text-plan no-underline hover:underline"
               >
-                {locale === "ja" ? "すべて見る →" : "See all →"}
+                See all →
               </TrackedExternalLink>
             </div>
             <ul className="grid gap-3">

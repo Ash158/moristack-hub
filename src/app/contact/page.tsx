@@ -1,52 +1,21 @@
 import type { Metadata } from "next";
-import { isLocale, getContent } from "@/lib/content";
+import { content } from "@/lib/content";
 
 export const revalidate = 3600;
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ locale: string }>;
-}): Promise<Metadata> {
-  const { locale } = await params;
-  if (!isLocale(locale)) return {};
-  const c = getContent(locale);
+export async function generateMetadata(): Promise<Metadata> {
+  const c = content;
   return {
     title: c.nav.contact,
-    description:
-      locale === "ja"
-        ? "MORISTACK へのお問い合わせはこちらから。"
-        : "Get in touch with MORISTACK.",
+    description: "Get in touch with MORISTACK.",
     alternates: {
-      canonical: `/${locale}/contact`,
-      languages: {
-        ja: "/ja/contact",
-        en: "/en/contact",
-        "x-default": "/en/contact",
-      },
+      canonical: "/contact",
     },
   };
 }
 
-export default async function ContactPage({
-  params,
-}: {
-  params: Promise<{ locale: string }>;
-}) {
-  const { locale } = await params;
-  if (!isLocale(locale)) return null;
-  const c = getContent(locale);
-
-  const heading = locale === "ja" ? "お問い合わせ" : "Contact";
-  const lede =
-    locale === "ja"
-      ? "ご質問・お見積り・その他なんでも、メールにてご連絡ください。"
-      : "Questions, quotes, or anything else — drop us an email.";
-  const emailLabel = locale === "ja" ? "メール" : "Email";
-  const note =
-    locale === "ja"
-      ? "サービス別にお問い合わせの場合は、各サービスサイト内のフォームが早く届きます。"
-      : "For service-specific questions, the contact form on each product site reaches the right person faster.";
+export default function ContactPage() {
+  const c = content;
 
   return (
     <section
@@ -67,7 +36,7 @@ export default async function ContactPage({
           margin: "0 0 18px",
         }}
       >
-        {heading}
+        Contact
       </h1>
       <p
         className="text-fg-soft"
@@ -78,7 +47,7 @@ export default async function ContactPage({
           margin: "0 0 40px",
         }}
       >
-        {lede}
+        Questions, quotes, or anything else — drop us an email.
       </p>
 
       <div
@@ -89,7 +58,7 @@ export default async function ContactPage({
           className="font-bold tracking-[0.08em] text-fg-soft"
           style={{ fontSize: 12, marginBottom: 8 }}
         >
-          {emailLabel}
+          Email
         </div>
         <a
           href={`mailto:${c.contactEmail}`}
@@ -108,7 +77,7 @@ export default async function ContactPage({
         className="text-fg-faint"
         style={{ fontSize: 14, marginTop: 24 }}
       >
-        {note}
+        For service-specific questions, the contact form on each product site reaches the right person faster.
       </p>
     </section>
   );

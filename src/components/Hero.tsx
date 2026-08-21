@@ -1,5 +1,4 @@
-import type { Locale } from "@/lib/content";
-import { getContent } from "@/lib/content";
+import { content } from "@/lib/content";
 
 function FlowDiagram({ from, mid, to }: { from: string; mid: string; to: string }) {
   return (
@@ -116,27 +115,20 @@ function FlowDiagram({ from, mid, to }: { from: string; mid: string; to: string 
   );
 }
 
-function TrustStrip({ locale }: { locale: Locale }) {
-  const items =
-    locale === "ja"
-      ? [
-          { label: "事前確認", note: "ご依頼を整理してから着手" },
-          { label: "明朗会計", note: "範囲と料金を先に提示" },
-          { label: "MORISTACK", note: "日本のお客様向けに運営" },
-          { label: "完了時のみ課金", note: "CALLは通話を完了して初めて請求" },
-        ]
-      : [
-          { label: "Reviewed up front", note: "Your request is reviewed before work starts" },
-          { label: "Up-front pricing", note: "Scope and cost confirmed before work" },
-          { label: "MORISTACK", note: "Operated as MORISTACK" },
-          { label: "Pay on completion", note: "CALL only bills when the call is made" },
-        ];
+const TRUST_STRIP_ITEMS: { label: string; note: string }[] = [
+  { label: "Reviewed up front", note: "Your request is reviewed before work starts" },
+  { label: "Up-front pricing", note: "Scope and cost confirmed before work" },
+  { label: "MORISTACK", note: "Operated as MORISTACK" },
+  { label: "Pay on completion", note: "CALL only bills when the call is made" },
+];
+
+function TrustStrip() {
   return (
     <ul
       className="mt-14 grid grid-cols-2 gap-x-6 gap-y-4 border-y border-border py-6 sm:grid-cols-4"
-      aria-label={locale === "ja" ? "MORISTACKの約束" : "MORISTACK guarantees"}
+      aria-label="MORISTACK guarantees"
     >
-      {items.map((item) => (
+      {TRUST_STRIP_ITEMS.map((item) => (
         <li key={item.label} className="flex items-start gap-3">
           <span
             aria-hidden="true"
@@ -154,8 +146,8 @@ function TrustStrip({ locale }: { locale: Locale }) {
   );
 }
 
-export function Hero({ locale }: { locale: Locale }) {
-  const c = getContent(locale);
+export function Hero() {
+  const c = content;
 
   return (
     <section className="hero-wash">
@@ -224,7 +216,7 @@ export function Hero({ locale }: { locale: Locale }) {
           </aside>
         </div>
 
-        <TrustStrip locale={locale} />
+        <TrustStrip />
       </div>
     </section>
   );
