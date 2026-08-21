@@ -20,6 +20,7 @@ const organizationJsonLd = {
   sameAs: [
     "https://call.moristack.com",
     "https://plan.moristack.com",
+    "https://poko.moristack.com",
   ],
   areaServed: { "@type": "Country", name: "Japan" },
   knowsAbout: [
@@ -27,6 +28,7 @@ const organizationJsonLd = {
     "Japan travel planning",
     "Phone-only restaurant reservations in Japan",
     "Hotel and ryokan booking by phone",
+    "AI tutoring for children in Japan",
   ],
   contactPoint: [
     {

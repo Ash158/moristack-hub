@@ -35,11 +35,24 @@ export type AboutCopy = {
 };
 
 export type ServiceItemCopy = {
-  id: "call" | "plan";
+  id: "call" | "plan" | "poko";
   badge: string;
   productName: string;
-  accentVar: "--call-accent" | "--plan-accent";
-  accentSoftVar: "--call-accent-soft" | "--plan-accent-soft";
+  accentVar:
+    | "--call-accent"
+    | "--plan-accent"
+    | "--poko-accent";
+  accentSoftVar:
+    | "--call-accent-soft"
+    | "--plan-accent-soft"
+    | "--poko-accent-soft";
+  /**
+   * Set to "ja" when the linked service is Japanese-only.
+   * Drives the language badge on the Services card with a `lang="ja"`
+   * attribute. English-language services (CALL, PLAN) leave this
+   * undefined.
+   */
+  serviceLanguage?: "ja";
   title: string;
   desc: string;
   bullets: string[];
@@ -80,6 +93,7 @@ export type FooterCopy = {
   tagline: string;
   callLabel: string;
   planLabel: string;
+  pokoLabel: string;
   contactLabel: string;
   copyright: string;
 };
@@ -145,7 +159,7 @@ export const content: PageContent = {
   services: {
     eyebrow: "SERVICES",
     title: "Independent services, one brand.",
-    body: "Each runs on its own site. Click through for full pricing, FAQs, and request forms.",
+    body: "Each runs on its own site. CALL and PLAN are in English; POKO is a Japanese-language service for families in Japan.",
     items: [
       {
         id: "call",
@@ -180,6 +194,24 @@ export const content: PageContent = {
         meta: "First 3 requests free / trips up to 4 nights / 5 days",
         url: "https://plan.moristack.com",
         cta: "Plan a Japan trip →",
+      },
+      {
+        id: "poko",
+        badge: "POKO",
+        productName: "MORISTACK POKO",
+        accentVar: "--poko-accent",
+        accentSoftVar: "--poko-accent-soft",
+        serviceLanguage: "ja",
+        title: "An AI tutor children actually talk to.",
+        desc: "A voice-first AI tutor for children in Japan. It gives staged hints instead of handing over the answer, practises English conversation in real time, and keeps study records only with a parent's consent. Built for the Japanese school curriculum, and offered entirely in Japanese.",
+        bullets: [
+          "Staged hints, never the answer straight away",
+          "Real-time Japanese and English voice practice",
+          "Parent-controlled records, up to 5 children",
+        ],
+        meta: "Japanese-language service",
+        url: "https://poko.moristack.com",
+        cta: "See POKO (in Japanese) →",
       },
     ],
   },
@@ -232,6 +264,7 @@ export const content: PageContent = {
     tagline: "Japan tasks, only as much as you need.",
     callLabel: "CALL",
     planLabel: "PLAN",
+    pokoLabel: "POKO",
     contactLabel: "Contact",
     copyright: "© 2026 MORISTACK",
   },
