@@ -182,7 +182,7 @@ export function Hero() {
                 </span>
               </a>
               <a
-                href={`mailto:${c.contactEmail}`}
+                href="/request"
                 className="font-bold text-accent no-underline transition hover:text-accent-deep"
               >
                 {c.hero.ctaSecondary}

@@ -87,8 +87,16 @@ export function Footer() {
             <ul className="mt-4 space-y-3 text-sm">
               <li>
                 <a
-                  href={`mailto:${c.contactEmail}`}
+                  href="/request"
                   className="font-bold text-fg no-underline transition hover:text-accent"
+                >
+                  Send a request →
+                </a>
+              </li>
+              <li>
+                <a
+                  href={`mailto:${c.contactEmail}`}
+                  className="text-fg-soft no-underline transition hover:text-fg"
                 >
                   {c.contactEmail}
                 </a>

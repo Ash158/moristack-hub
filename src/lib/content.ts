@@ -74,6 +74,7 @@ export type FounderCopy = {
   title: string;
   body: string;
   address: string;
+  highlights: string[];
 };
 
 export type FooterCopy = {
@@ -227,6 +228,11 @@ export const content: PageContent = {
     title: "Operations for the practical side of Japan.",
     body: "MORISTACK is operated for clients working with Japan from overseas. We focus on Japanese phone-based arrangements and custom trip guides, and only take on requests we can complete within the scope, price, and timeline we confirm up front.",
     address: "MORISTACK",
+    highlights: [
+      "Operating since 2026",
+      "Available in English and Japanese",
+      "Independent operations partner",
+    ],
   },
   footer: {
     tagline: "Japan tasks, only as much as you need.",

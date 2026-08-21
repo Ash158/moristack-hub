@@ -89,6 +89,16 @@ export function Founder() {
             <span className="font-extrabold tracking-wide text-fg">
               {c.founder.address}
             </span>
+            <ul className="flex flex-wrap items-center gap-2 text-xs text-fg-soft">
+              {c.founder.highlights.map((h) => (
+                <li
+                  key={h}
+                  className="rounded-full border border-border bg-card px-3 py-1 font-semibold text-fg-soft"
+                >
+                  {h}
+                </li>
+              ))}
+            </ul>
             <a
               href={`mailto:${c.contactEmail}`}
               className="ml-auto inline-flex items-center gap-2 rounded-full border border-fg/15 bg-card px-5 py-2.5 font-bold text-fg no-underline transition hover:border-fg hover:bg-fg hover:text-card"

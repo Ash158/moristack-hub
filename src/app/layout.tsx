@@ -79,6 +79,13 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: "/",
+    languages: {
+      en: "/",
+      "ja-JP": "/",
+    },
+  },
+  other: {
+    "og:locale:alternate": "ja_JP",
   },
   openGraph: {
     siteName: "MORISTACK",
