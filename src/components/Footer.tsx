@@ -1,5 +1,6 @@
 import { Logo } from "@/components/Logo";
 import { content } from "@/lib/content";
+import { TrackedExternalLink } from "@/components/TrackedExternalLink";
 
 export function Footer() {
   const c = content;
@@ -27,8 +28,10 @@ export function Footer() {
             <p className="eyebrow text-fg-soft">Services</p>
             <ul className="mt-4 space-y-3 text-sm">
               <li>
-                <a
+                <TrackedExternalLink
                   href="https://call.moristack.com"
+                  eventName="cross_sell_click"
+                  eventData={{ from: "hub", to: "call", placement: "footer" }}
                   target="_blank"
                   rel="noopener"
                   className="group flex items-center gap-2 font-bold text-fg no-underline"
@@ -45,14 +48,16 @@ export function Footer() {
                   >
                     ↗
                   </span>
-                </a>
+                </TrackedExternalLink>
                 <p className="mt-1 pl-4 text-xs leading-relaxed text-fg-soft">
                   Japanese phone calls, made for you
                 </p>
               </li>
               <li>
-                <a
+                <TrackedExternalLink
                   href="https://plan.moristack.com"
+                  eventName="cross_sell_click"
+                  eventData={{ from: "hub", to: "plan", placement: "footer" }}
                   target="_blank"
                   rel="noopener"
                   className="group flex items-center gap-2 font-bold text-fg no-underline"
@@ -69,14 +74,16 @@ export function Footer() {
                   >
                     ↗
                   </span>
-                </a>
+                </TrackedExternalLink>
                 <p className="mt-1 pl-4 text-xs leading-relaxed text-fg-soft">
                   Custom Japan trip guides, researched end-to-end
                 </p>
               </li>
               <li>
-                <a
+                <TrackedExternalLink
                   href="https://poko.moristack.com"
+                  eventName="cross_sell_click"
+                  eventData={{ from: "hub", to: "poko", placement: "footer" }}
                   target="_blank"
                   rel="noopener"
                   className="group flex items-center gap-2 font-bold text-fg no-underline"
@@ -93,7 +100,7 @@ export function Footer() {
                   >
                     ↗
                   </span>
-                </a>
+                </TrackedExternalLink>
                 <p className="mt-1 pl-4 text-xs leading-relaxed text-fg-soft">
                   An AI tutor for children in Japan (Japanese)
                 </p>

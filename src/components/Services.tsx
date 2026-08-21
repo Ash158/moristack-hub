@@ -1,5 +1,6 @@
 import type { CSSProperties } from "react";
 import { content, type ServiceItemCopy } from "@/lib/content";
+import { TrackedExternalLink } from "@/components/TrackedExternalLink";
 
 function LanguageBadge({ lang }: { lang: "ja" }) {
   return (
@@ -73,8 +74,10 @@ function ServiceCard({ s }: { s: ServiceItemCopy }) {
         <span className="text-sm font-bold" style={accentStyle}>
           {s.meta}
         </span>
-        <a
+        <TrackedExternalLink
           href={s.url}
+          eventName="cross_sell_click"
+          eventData={{ from: "hub", to: s.id, placement: "services_section" }}
           target="_blank"
           rel="noopener"
           className="inline-flex items-center gap-1.5 text-sm font-bold no-underline"
@@ -84,7 +87,7 @@ function ServiceCard({ s }: { s: ServiceItemCopy }) {
           <span aria-hidden="true" className="text-base leading-none">
             →
           </span>
-        </a>
+        </TrackedExternalLink>
       </div>
     </article>
   );
