@@ -79,32 +79,6 @@ export function Footer() {
                   Custom Japan trip guides, researched end-to-end
                 </p>
               </li>
-              <li>
-                <TrackedExternalLink
-                  href="https://poko.moristack.com"
-                  eventName="cross_sell_click"
-                  eventData={{ from: "hub", to: "poko", placement: "footer" }}
-                  target="_blank"
-                  rel="noopener"
-                  className="group flex items-center gap-2 font-bold text-fg no-underline"
-                >
-                  <span
-                    aria-hidden="true"
-                    className="inline-block h-2 w-2 rounded-full"
-                    style={{ background: "var(--poko-accent)" }}
-                  />
-                  MORISTACK POKO
-                  <span
-                    aria-hidden="true"
-                    className="text-fg-faint transition group-hover:translate-x-0.5 group-hover:text-poko"
-                  >
-                    ↗
-                  </span>
-                </TrackedExternalLink>
-                <p className="mt-1 pl-4 text-xs leading-relaxed text-fg-soft">
-                  An AI tutor for children in Japan (Japanese)
-                </p>
-              </li>
             </ul>
           </div>
 

@@ -49,12 +49,6 @@
   --plan-accent-dark: #2e5c3d;
   --plan-accent-soft: #eaf4ee;
   --plan-accent-soft-line: #cfe6d8;
-  /* POKO accent: orange side of the POKO palette (green is reserved for PLAN).
-   * Darkened to #b8502e for ~4.97:1 contrast on white. */
-  --poko-accent: #b8502e;
-  --poko-accent-dark: #93401f;
-  --poko-accent-soft: #fdefe9;
-  --poko-accent-soft-line: #f4d2c3;
 }
 
 @theme inline {
@@ -82,9 +76,6 @@
   --color-plan: var(--plan-accent);
   --color-plan-dark: var(--plan-accent-dark);
   --color-plan-bg: var(--plan-accent-soft);
-  --color-poko: var(--poko-accent);
-  --color-poko-dark: var(--poko-accent-dark);
-  --color-poko-bg: var(--poko-accent-soft);
 
   --font-sans: var(--font-jakarta), "Plus Jakarta Sans", ui-sans-serif, system-ui,
     -apple-system, "Hiragino Kaku Gothic ProN", "Yu Gothic UI", "Meiryo", sans-serif;
