@@ -20,6 +20,12 @@ const GUIDES = [
     excerpt:
       "One of our three working principles, broken down into what it does in practice.",
   },
+  {
+    slug: "cash-vs-ic-card-in-japan-2026",
+    title: "Cash vs IC Card in Japan 2026: When You Still Need Yen",
+    excerpt:
+      "Where IC cards (Suica, Pasmo, ICOCA) work, where cash is still required, and how much yen to bring for a typical trip.",
+  },
 ];
 
 export const metadata: Metadata = {
