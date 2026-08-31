@@ -4,13 +4,13 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "How MORISTACK handles your request",
   description:
-    "What happens between sending a request and the work starting — in four short steps.",
+    "What happens between sending a request and the work starting — step by step.",
   alternates: { canonical: "/guides/how-moristack-handles-your-request" },
 };
 
 export default function Guide() {
   return (
-    <main className="bg-bg">
+    <>
       <article className="px-6 py-20 sm:py-24">
         <div className="mx-auto max-w-3xl">
           <p className="eyebrow text-accent">NOTES</p>
@@ -25,7 +25,7 @@ export default function Guide() {
               When you send a request through the form on this site, it lands with a person — not a chatbot. We read it, check it against what we can actually do, and reply with scope and price before any work starts.
             </p>
             <p>
-              The same flow applies whether you&apos;re asking for a single Japanese phone call (CALL) or a custom Japan trip guide (PLAN). The four practical steps:
+              The same flow applies whether you&apos;re asking for a single Japanese phone call (CALL) or a custom Japan trip guide (PLAN). The practical steps:
             </p>
             <ol className="list-decimal space-y-2 pl-6">
               <li>
@@ -56,6 +56,6 @@ export default function Guide() {
           </div>
         </div>
       </article>
-    </main>
+    </>
   );
 }

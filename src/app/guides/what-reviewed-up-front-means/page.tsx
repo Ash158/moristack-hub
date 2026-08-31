@@ -4,13 +4,13 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "What 'reviewed up front' actually means",
   description:
-    "One of our three working principles, broken down into what it does in practice.",
+    "A working principle, broken down into what it does in practice.",
   alternates: { canonical: "/guides/what-reviewed-up-front-means" },
 };
 
 export default function Guide() {
   return (
-    <main className="bg-bg">
+    <>
       <article className="px-6 py-20 sm:py-24">
         <div className="mx-auto max-w-3xl">
           <p className="eyebrow text-accent">NOTES</p>
@@ -22,7 +22,7 @@ export default function Guide() {
           </p>
           <div className="prose mt-8 space-y-6 text-[17px] leading-relaxed text-fg">
             <p>
-              You&apos;ll see &ldquo;reviewed up front&rdquo; in several places on this site. It&apos;s one of three principles we work by, and it has a specific meaning.
+              You&apos;ll see &ldquo;reviewed up front&rdquo; in several places on this site. It&apos;s one of the principles we work by, and it has a specific meaning.
             </p>
             <p>
               <strong>Reviewed up front</strong> means:
@@ -33,7 +33,7 @@ export default function Guide() {
               <li>If something is unclear, we ask one short list of questions instead of starting work</li>
               <li>If we can&apos;t take the request on, we tell you the same day — there is no charge for &ldquo;trying&rdquo;</li>
             </ul>
-            <p>It&apos;s paired with two other principles:</p>
+            <p>It&apos;s paired with the other principles:</p>
             <ul className="list-disc space-y-2 pl-6">
               <li>
                 <strong>Scope and price up front</strong> — you see what&apos;s included, what isn&apos;t, and the cost before we start. No vague billing later.
@@ -57,6 +57,6 @@ export default function Guide() {
           </div>
         </div>
       </article>
-    </main>
+    </>
   );
 }

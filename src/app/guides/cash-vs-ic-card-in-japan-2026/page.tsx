@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function Guide() {
   return (
-    <main className="bg-bg">
+    <>
       <article className="px-6 py-20 sm:py-24">
         <div className="mx-auto max-w-3xl">
           <p className="eyebrow text-accent">JAPAN TRAVEL</p>
@@ -143,6 +143,6 @@ export default function Guide() {
           </div>
         </div>
       </article>
-    </main>
+    </>
   );
 }

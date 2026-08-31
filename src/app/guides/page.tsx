@@ -6,19 +6,19 @@ const GUIDES = [
     slug: "how-moristack-handles-your-request",
     title: "How MORISTACK handles your request",
     excerpt:
-      "What happens between sending a request and the work starting — in four short steps.",
+      "What happens between sending a request and the work starting — step by step.",
   },
   {
     slug: "call-vs-plan",
     title: "CALL vs PLAN — which one fits your request",
     excerpt:
-      "Two services, two jobs. A short guide to picking the right one before you send the form.",
+      "Different services, different jobs. A short guide to picking the right one before you send the form.",
   },
   {
     slug: "what-reviewed-up-front-means",
     title: "What 'reviewed up front' actually means",
     excerpt:
-      "One of our three working principles, broken down into what it does in practice.",
+      "A working principle, broken down into what it does in practice.",
   },
   {
     slug: "cash-vs-ic-card-in-japan-2026",
@@ -31,7 +31,7 @@ const GUIDES = [
 export const metadata: Metadata = {
   title: "Notes from MORISTACK",
   description:
-    "Short, practical notes from MORISTACK on how requests are handled and how the two services differ.",
+    "Short, practical notes from MORISTACK on how requests are handled and how CALL and PLAN differ.",
   alternates: { canonical: "/guides" },
 };
 
@@ -45,7 +45,7 @@ export default function GuidesIndex() {
             Notes from MORISTACK.
           </h1>
           <p className="mt-5 text-[17px] leading-relaxed text-fg-soft">
-            Practical notes on how we work, what to expect when you send a request, and how the two services differ. Each one is short.
+            Practical notes on how we work, what to expect when you send a request, and how CALL and PLAN differ. Each one is short.
           </p>
           <ul className="mt-10 grid gap-4">
             {GUIDES.map((g) => (

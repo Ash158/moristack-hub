@@ -2,8 +2,9 @@ import Link from "next/link";
 
 export default function NotFound() {
   return (
-    <main className="flex min-h-screen flex-1 flex-col items-center justify-center bg-bg px-6 py-16 text-fg">
-      <div className="w-full max-w-xl text-center">
+    <>
+      <div className="flex min-h-screen flex-col items-center justify-center px-6 py-16">
+        <div className="w-full max-w-xl text-center">
         <p className="text-sm font-semibold tracking-[0.22em] text-fg-soft">
           404
         </p>
@@ -27,7 +28,8 @@ export default function NotFound() {
             See services
           </Link>
         </div>
+        </div>
       </div>
-    </main>
+    </>
   );
 }

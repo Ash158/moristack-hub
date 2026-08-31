@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 
 export default function RequestPage() {
   return (
-    <main className="bg-bg">
+    <>
       <section className="px-6 py-20 sm:py-24">
         <div className="mx-auto max-w-3xl">
           <p className="eyebrow text-accent">REQUEST</p>
@@ -53,6 +53,6 @@ export default function RequestPage() {
           <RequestForm />
         </div>
       </section>
-    </main>
+    </>
   );
 }

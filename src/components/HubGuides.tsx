@@ -5,19 +5,19 @@ const HUB_GUIDES = [
     slug: "how-moristack-handles-your-request",
     title: "How MORISTACK handles your request",
     excerpt:
-      "What happens between sending a request and the work starting — in four short steps.",
+      "What happens between sending a request and the work starting — step by step.",
   },
   {
     slug: "call-vs-plan",
     title: "CALL vs PLAN — which one fits your request",
     excerpt:
-      "Two services, two jobs. A short guide to picking the right one before you send the form.",
+      "Different services, different jobs. A short guide to picking the right one before you send the form.",
   },
   {
     slug: "what-reviewed-up-front-means",
     title: "What 'reviewed up front' actually means",
     excerpt:
-      "One of our three working principles, broken down into what it does in practice.",
+      "A working principle, broken down into what it does in practice.",
   },
   {
     slug: "cash-vs-ic-card-in-japan-2026",

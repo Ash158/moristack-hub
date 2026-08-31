@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "CALL vs PLAN — which one fits your request",
   description:
-    "Two services, two jobs. A short guide to picking the right one before you send the form.",
+    "Different services, different jobs. A short guide to picking the right one before you send the form.",
   alternates: { canonical: "/guides/call-vs-plan" },
 };
 
@@ -31,7 +31,7 @@ export default function Guide() {
               <li>Restaurant, ryokan, salon, or clinic reservations</li>
               <li>Confirming an existing booking by phone</li>
               <li>Asking a city office or utility a practical question</li>
-              <li>A single short call, billed only when the call is made</li>
+              <li>A single short call handled on your behalf</li>
             </ul>
             <h2 className="mt-10 text-2xl font-extrabold text-fg">
               PLAN — for trip-shape research
@@ -40,10 +40,10 @@ export default function Guide() {
               <li>&ldquo;We&apos;re going to Hokkaido for 5 days in October — what should we actually look at?&rdquo;</li>
               <li>&ldquo;I want a quieter alternative to the Golden Route, with onsen and easy rail.&rdquo;</li>
               <li>A custom map and a written guide, researched end-to-end</li>
-              <li>Trips up to 4 nights / 5 days are free during launch; longer trips are scoped before any charge</li>
+              <li>Longer trips are scoped before any work begins</li>
             </ul>
             <p>
-              If the work is a phone call, use CALL. If the work is shaping a trip on paper, use PLAN. If you need both, they&apos;re booked separately — trip details are never copied between the two services.
+              If the work is a phone call, use CALL. If the work is shaping a trip on paper, use PLAN. If you need both, they&apos;re booked separately — trip details are never copied between CALL and PLAN.
             </p>
             <p>
               Not sure? Send the form and tell us a little about the situation. We&apos;ll point you to the right one.

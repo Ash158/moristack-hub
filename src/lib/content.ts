@@ -158,7 +158,7 @@ export const content: PageContent = {
         desc: "For restaurants, salons, city offices, utilities, and other phone-only situations in Japan, a Japanese speaker makes the call on your behalf. New reservations, confirmations, changes, and routine questions.",
         bullets: [
           "New bookings, changes, confirmations, questions",
-          "No charge until the call is completed",
+          "Card registered only when you submit a request",
           "Secure card registration via Stripe",
         ],
         meta: "See call.moristack.com for details",
@@ -176,7 +176,7 @@ export const content: PageContent = {
         bullets: [
           "Custom map + written guide",
           "You handle all bookings and payments",
-          "Trips up to 4 nights / 5 days are free during launch",
+          "Trips researched end-to-end before any work begins",
         ],
         meta: "See plan.moristack.com for details",
         url: "https://plan.moristack.com",

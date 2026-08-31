@@ -16,7 +16,7 @@ export function About() {
               {c.about.body}
             </p>
           </div>
-          <ol className="grid gap-4" aria-label="Three MORISTACK principles">
+          <ol className="grid gap-4" aria-label="MORISTACK principles">
             {c.about.principles.map((p) => (
               <li
                 key={p.num}
