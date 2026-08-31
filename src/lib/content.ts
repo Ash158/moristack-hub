@@ -106,7 +106,7 @@ export const content: PageContent = {
     guides: "Guides",
   },
   hero: {
-    eyebrow: "INDIVIDUAL JAPAN OPERATIONS",
+    eyebrow: "INDEPENDENT JAPAN OPERATIONS",
     kicker: "MORISTACK, made workable.",
     headline: "Japan tasks, made workable.",
     subhead:
@@ -161,7 +161,7 @@ export const content: PageContent = {
           "No charge until the call is completed",
           "Secure card registration via Stripe",
         ],
-        meta: "From $6 / billed only when the call is made",
+        meta: "See call.moristack.com for details",
         url: "https://call.moristack.com",
         cta: "Make a Japanese phone call →",
       },
@@ -178,7 +178,7 @@ export const content: PageContent = {
           "You handle all bookings and payments",
           "Trips up to 4 nights / 5 days are free during launch",
         ],
-        meta: "First 3 requests free / trips up to 4 nights / 5 days",
+        meta: "See plan.moristack.com for details",
         url: "https://plan.moristack.com",
         cta: "Plan a Japan trip →",
       },

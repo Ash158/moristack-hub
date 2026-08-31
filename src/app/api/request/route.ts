@@ -26,7 +26,7 @@ export async function POST(req: NextRequest) {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          from: "hub-request@moristack.com",
+          from: "support@moristack.com",
           to: "support@moristack.com",
           subject,
           text,

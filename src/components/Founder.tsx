@@ -59,8 +59,8 @@ export function Founder() {
 
   return (
     <section
-      id="founder"
-      aria-labelledby="founder-heading"
+      id="company"
+      aria-labelledby="company-heading"
       className="px-6 py-20 sm:py-24"
     >
       <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[260px_1fr]">
@@ -77,7 +77,7 @@ export function Founder() {
         <div className="max-w-2xl">
           <p className="eyebrow text-accent">{c.founder.eyebrow}</p>
           <h2
-            id="founder-heading"
+            id="company-heading"
             className="display-title mt-4 text-[32px] font-extrabold text-fg sm:text-[40px]"
           >
             {c.founder.title}

@@ -1,7 +1,8 @@
 # moristack-hub
 
 The MORISTACK apex brand hub. A small Next.js 16 site that lives at
-`moristack.com` and replaces the previous "Choose your language" stub.
+`moristack.com` — the English-only top-of-funnel surface for the
+MORISTACK brand (CALL and PLAN each run on their own product site).
 
 ## Stack
 
@@ -9,6 +10,7 @@ The MORISTACK apex brand hub. A small Next.js 16 site that lives at
 - TypeScript 5
 - Tailwind CSS 4
 - `@vercel/analytics` + `@vercel/speed-insights`
+- Resend (transactional email via the `/api/request` route)
 
 ## Develop
 
@@ -32,18 +34,21 @@ created for every PR.
 
 ## Routes
 
-- `/` — language gate + service list
-- `/en` — English home
-- `/ja` — 日本語ホーム
-- `/en/services`, `/ja/services` — service directory
-- `/en/about`, `/ja/about` — about page
-- `/en/contact`, `/ja/contact` — contact page
+- `/` — apex home (hero + services + guides)
+- `/about` — about / company
+- `/contact` — contact (email only)
+- `/guides` — hub guides index
+- `/guides/[slug]` — individual guides
+- `/request` — request form (posts to `/api/request`)
+- `/api/request` — Resend-backed request handler
+- `/opengraph-image` — generated OG image
 - `/sitemap.xml`, `/robots.txt`
 
 ## Content
 
-Edit `src/lib/services.ts` to add, edit, or retire a product.
-Every user-facing string lives in one of the page files; copy is bilingual.
+Edit `src/lib/content.ts` to add, edit, or retire a product or copy
+block. Every user-facing string lives in this single content module
+or in the page files that import it.
 
 ## See also
 

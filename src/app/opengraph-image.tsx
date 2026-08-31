@@ -43,7 +43,7 @@ export default async function Image() {
             style={{
               width: 14,
               height: 14,
-              background: "#b1502f",
+              background: "#0f1d3a",
               transform: "rotate(45deg)",
               borderRadius: 2,
             }}

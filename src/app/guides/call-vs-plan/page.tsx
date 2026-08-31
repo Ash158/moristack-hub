@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function Guide() {
   return (
-    <main className="bg-bg">
+    <>
       <article className="px-6 py-20 sm:py-24">
         <div className="mx-auto max-w-3xl">
           <p className="eyebrow text-accent">NOTES</p>
@@ -22,7 +22,7 @@ export default function Guide() {
           </p>
           <div className="prose mt-8 space-y-6 text-[17px] leading-relaxed text-fg">
             <p>
-              MORISTACK has two services, designed for different jobs. Use this short guide to pick the right one.
+              MORISTACK has services, each designed for a different job. Use this short guide to pick the right one.
             </p>
             <h2 className="mt-10 text-2xl font-extrabold text-fg">
               CALL — for Japanese phone-based work
@@ -60,6 +60,6 @@ export default function Guide() {
           </div>
         </div>
       </article>
-    </main>
+    </>
   );
 }

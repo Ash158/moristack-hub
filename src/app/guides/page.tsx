@@ -37,7 +37,7 @@ export const metadata: Metadata = {
 
 export default function GuidesIndex() {
   return (
-    <main className="bg-bg">
+    <>
       <section className="px-6 py-20 sm:py-24">
         <div className="mx-auto max-w-3xl">
           <p className="eyebrow text-accent">NOTES</p>
@@ -69,6 +69,6 @@ export default function GuidesIndex() {
           </ul>
         </div>
       </section>
-    </main>
+    </>
   );
 }

@@ -44,7 +44,7 @@ export function HubGuides() {
             Notes on how we work.
           </h2>
           <p className="mt-4 max-w-2xl text-[17px] leading-relaxed text-fg-soft">
-            Short, practical notes from MORISTACK — what to expect when you send a request, and how the two services differ.
+            Short, practical notes from MORISTACK — what to expect when you send a request, and how CALL and PLAN differ.
           </p>
         </div>
 
