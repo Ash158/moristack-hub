@@ -22,6 +22,7 @@ const organizationJsonLd = {
     "https://plan.moristack.com",
   ],
   areaServed: { "@type": "Country", name: "Japan" },
+  knowsLanguage: ["en", "ja"],
   knowsAbout: [
     "Japanese phone-call concierge",
     "Japan travel planning",
