@@ -108,7 +108,15 @@ export function Footer() {
 
         <div className="mt-10 flex flex-col items-start justify-between gap-3 border-t border-border-soft pt-6 text-xs text-fg-soft sm:flex-row sm:items-center">
           <p>© {year} MORISTACK</p>
-          <p>Moving Japan tasks forward, from abroad.</p>
+          <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
+            <a href="/privacy" className="text-fg-soft no-underline transition hover:text-fg">
+              Privacy
+            </a>
+            <a href="/terms" className="text-fg-soft no-underline transition hover:text-fg">
+              Terms
+            </a>
+            <p>Moving Japan tasks forward, from abroad.</p>
+          </div>
         </div>
       </div>
     </footer>
