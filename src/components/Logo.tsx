@@ -40,13 +40,25 @@ export function Logo({
   diamondColorVar = "var(--accent)",
 }: Props) {
   const s = SIZES[size];
+  const barH = Math.max(2, Math.round(s.fontSize * 0.11));
+  const barGap = Math.max(1, Math.round(s.fontSize * 0.09));
+  const markW = Math.round(s.fontSize * 0.6);
   const inner = (
     <span className="inline-flex items-center text-fg" style={{ gap: 10 }}>
       <span
         className="inline-flex items-center tracking-tight"
         style={{ gap: s.gap, fontSize: s.fontSize, lineHeight: 1 }}
       >
-        <span style={{ fontWeight: 500 }}>MORI</span>
+        <span
+          aria-hidden="true"
+          className="inline-flex flex-col justify-center"
+          style={{ width: markW, height: s.fontSize, gap: barGap }}
+        >
+          <span style={{ height: barH, width: "60%", background: "currentColor", borderRadius: 1 }} />
+          <span style={{ height: barH, width: "100%", background: "currentColor", borderRadius: 1 }} />
+          <span style={{ height: barH, width: "45%", background: "currentColor", borderRadius: 1 }} />
+        </span>
+        <span style={{ fontWeight: 800 }}>MORI</span>
         <span
           aria-hidden="true"
           style={{
@@ -58,7 +70,7 @@ export function Logo({
             transform: "translateY(0.5px) rotate(45deg)",
           }}
         />
-        <span style={{ fontWeight: 800 }}>STACK</span>
+        <span style={{ fontWeight: 500 }}>STACK</span>
       </span>
       {badge ? (
         <span
