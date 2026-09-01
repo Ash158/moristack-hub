@@ -52,6 +52,22 @@ const websiteJsonLd = {
   },
 };
 
+const founderJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Satoshi Morinaga",
+  jobTitle: "Founder, MORISTACK",
+  worksFor: {
+    "@type": "Organization",
+    name: "MORISTACK",
+    url: SITE_URL,
+  },
+  url: SITE_URL,
+  sameAs: [
+    "https://github.com/Ash158",
+  ],
+};
+
 const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"],
@@ -136,6 +152,12 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(websiteJsonLd),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(founderJsonLd),
           }}
         />
         <TopNav />
