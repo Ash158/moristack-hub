@@ -229,9 +229,9 @@ export const content: PageContent = {
     body: "MORISTACK is operated for clients working with Japan from overseas. We focus on Japanese phone-based arrangements and custom trip guides, and only take on requests we can complete within the scope, price, and timeline we confirm up front.",
     address: "MORISTACK",
     highlights: [
-      "Operating since 2026",
-      "Available in English and Japanese",
-      "Independent operations partner",
+      "Scope and price up front",
+      "Plain-language status updates",
+      "Reservations and confirmations",
     ],
   },
   footer: {

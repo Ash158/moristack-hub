@@ -90,32 +90,14 @@ export function Founder() {
               {c.founder.address}
             </span>
             <ul className="flex flex-wrap items-center gap-2 text-xs text-fg-soft">
-              {c.founder.highlights.map((h) =>
-                h === "Independent operations partner" ? (
-                  <li
-                    key="about-visual"
-                    aria-label={h}
-                    className="overflow-hidden rounded-full border border-border bg-card"
-                  >
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src="/about/visual.jpg"
-                      alt=""
-                      aria-hidden="true"
-                      width={80}
-                      height={24}
-                      className="block h-6 w-20 object-cover"
-                    />
-                  </li>
-                ) : (
-                  <li
-                    key={h}
-                    className="rounded-full border border-border bg-card px-3 py-1 font-semibold text-fg-soft"
-                  >
-                    {h}
-                  </li>
-                )
-              )}
+              {c.founder.highlights.map((h) => (
+                <li
+                  key={h}
+                  className="rounded-full border border-border bg-card px-3 py-1 font-semibold text-fg-soft"
+                >
+                  {h}
+                </li>
+              ))}
             </ul>
             <a
               href={`mailto:${c.contactEmail}`}
