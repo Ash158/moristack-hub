@@ -64,6 +64,12 @@ const founderJsonLd = {
   },
   url: SITE_URL,
   sameAs: [
+    // TODO(security-2026-09-02): 森長判断案件 - sameAs 整理
+    // 現状: 個人 GitHub (https://github.com/Ash158) を 1 件列挙。
+    // 提案案 (a) brand 関連のみ残す: call.moristack.com / plan.moristack.com のみ
+    //         (b) 個人 link は削除 (founder = personal, リスク評価次第)
+    //         (c) 現状維持 (GitHub は公開プロフィールなので影響軽微と判断)
+    // 親 cross-verify + 森長承認後に確定。decision まで現状維持。
     "https://github.com/Ash158",
   ],
 };
