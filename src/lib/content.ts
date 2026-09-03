@@ -192,34 +192,34 @@ export const content: PageContent = {
       {
         badge: "CALL",
         title: "How to phone-book a Japanese restaurant",
-        href: "https://call.moristack.com/guides",
+        href: "https://call.moristack.com/guides/confirm-restaurant-reservation-japan",
       },
       {
         badge: "CALL",
         title: "What to confirm by phone with a ryokan or hotel",
-        href: "https://call.moristack.com/guides",
+        href: "https://call.moristack.com/guides/what-to-ask-a-ryokan-before-booking",
       },
       {
         badge: "CALL",
         title: "English phrases for utility and city-office calls",
-        href: "https://call.moristack.com/guides",
+        href: "https://call.moristack.com/guides/call-city-hall-japan-without-japanese",
       },
     ],
     planGuides: [
       {
         badge: "PLAN",
         title: "Japan eSIM vs pocket Wi-Fi: which one wins",
-        href: "https://plan.moristack.com/guides",
+        href: "https://plan.moristack.com/guides/esim-or-sim-card-japan-what-to-know",
       },
       {
         badge: "PLAN",
         title: "Do you still need a Japan Rail Pass?",
-        href: "https://plan.moristack.com/guides",
+        href: "https://plan.moristack.com/guides/do-you-need-japan-rail-pass",
       },
       {
         badge: "PLAN",
         title: "How to choose a luggage storage spot in Japan",
-        href: "https://plan.moristack.com/guides",
+        href: "https://plan.moristack.com/guides/luggage-storage-japan-what-to-know",
       },
     ],
   },
