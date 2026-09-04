@@ -1,11 +1,28 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
+
+const HERO_IMAGE = {
+  src: "/images/guides/health-insurance-vs-travel-insurance-japan-hero.jpg",
+  alt: "An empty hospital waiting area in Tokyo with rows of green chairs and Japanese and English signage",
+  width: 1800,
+  height: 1112,
+};
 
 export const metadata: Metadata = {
   title: "Japanese Health Insurance vs Travel Insurance: How a Clinic Visit Actually Works",
   description:
     "The difference between a Japanese hoken-sho (health insurance card) and foreign travel insurance at a Japanese clinic or hospital: who pays what, when, and what paperwork each system needs.",
   alternates: { canonical: "/guides/health-insurance-vs-travel-insurance-japan" },
+  openGraph: {
+    type: "article",
+    title: "Japanese Health Insurance vs Travel Insurance: How a Clinic Visit Actually Works",
+    images: [{ url: HERO_IMAGE.src, width: HERO_IMAGE.width, height: HERO_IMAGE.height, alt: HERO_IMAGE.alt }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: [HERO_IMAGE.src],
+  },
 };
 
 export default function Guide() {
@@ -20,6 +37,17 @@ export default function Guide() {
           <p className="mt-6 text-[15px] uppercase tracking-[0.18em] text-fg-soft">
             ~5 min read
           </p>
+          <div className="mt-8 overflow-hidden rounded-2xl border border-border">
+            <Image
+              src={HERO_IMAGE.src}
+              alt={HERO_IMAGE.alt}
+              width={HERO_IMAGE.width}
+              height={HERO_IMAGE.height}
+              sizes="(min-width: 1024px) 768px, 100vw"
+              className="w-full object-cover"
+              priority
+            />
+          </div>
           <div className="prose mt-8 space-y-6 text-[17px] leading-relaxed text-fg">
             <p>
               A Japanese hoken-sho (保険証, health insurance card) and a foreign travel insurance policy solve the same underlying problem — the cost of a clinic or hospital visit — but they work through completely different mechanics. A hoken-sho reduces what you pay <em>at the counter, on the spot</em>. Travel insurance almost always requires you to <em>pay in full first</em>, then claim the money back afterward. Confusing the two is the most common reason a visitor is surprised by a bill in Japan.

@@ -1,11 +1,28 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
+
+const HERO_IMAGE = {
+  src: "/images/guides/onsen-sento-tattoo-etiquette-japan-hero.jpg",
+  alt: "A steaming outdoor hot spring bath at a traditional Japanese onsen, empty, with stone steps and wooden signage",
+  width: 1800,
+  height: 1112,
+};
 
 export const metadata: Metadata = {
   title: "Onsen and Sento With Tattoos: What's Actually Allowed in Japan",
   description:
     "Whether tattoos are allowed at Japanese onsen and sento in 2026, how to find a tattoo-friendly bath, cover-up stickers that work, and the basic bathing etiquette every visitor should know.",
   alternates: { canonical: "/guides/onsen-sento-tattoo-etiquette-japan" },
+  openGraph: {
+    type: "article",
+    title: "Onsen and Sento With Tattoos: What's Actually Allowed in Japan",
+    images: [{ url: HERO_IMAGE.src, width: HERO_IMAGE.width, height: HERO_IMAGE.height, alt: HERO_IMAGE.alt }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: [HERO_IMAGE.src],
+  },
 };
 
 export default function Guide() {
@@ -20,6 +37,17 @@ export default function Guide() {
           <p className="mt-6 text-[15px] uppercase tracking-[0.18em] text-fg-soft">
             ~5 min read
           </p>
+          <div className="mt-8 overflow-hidden rounded-2xl border border-border">
+            <Image
+              src={HERO_IMAGE.src}
+              alt={HERO_IMAGE.alt}
+              width={HERO_IMAGE.width}
+              height={HERO_IMAGE.height}
+              sizes="(min-width: 1024px) 768px, 100vw"
+              className="w-full object-cover"
+              priority
+            />
+          </div>
           <div className="prose mt-8 space-y-6 text-[17px] leading-relaxed text-fg">
             <p>
               Many onsen (hot spring baths) and sento (public bathhouses) in Japan still refuse visible tattoos, and the rule is not a myth or an old stereotype — it is a real, commonly enforced house policy at a large share of facilities. But the picture is not all-or-nothing either: a growing number of baths allow tattoos outright, many more allow them if covered with a small patch, and private baths sidestep the issue entirely. The short version: <strong>check the specific facility before you go, and carry cover-up stickers as a backup</strong>.
