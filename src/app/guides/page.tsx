@@ -26,6 +26,18 @@ const GUIDES = [
     excerpt:
       "Where IC cards (Suica, Pasmo, ICOCA) work, where cash is still required, and how much yen to bring for a typical trip.",
   },
+  {
+    slug: "onsen-sento-tattoo-etiquette-japan",
+    title: "Onsen and Sento With Tattoos: What's Actually Allowed",
+    excerpt:
+      "Whether tattoos are allowed at Japanese onsen and sento, how to find a tattoo-friendly bath, cover-up stickers, and basic bathing etiquette.",
+  },
+  {
+    slug: "health-insurance-vs-travel-insurance-japan",
+    title: "Health Insurance vs Travel Insurance in Japan: How Payment Actually Works",
+    excerpt:
+      "The difference between a Japanese hoken-sho and foreign travel insurance at a clinic: who pays what, when, and what paperwork each system needs.",
+  },
 ];
 
 export const metadata: Metadata = {

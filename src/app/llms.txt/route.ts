@@ -21,10 +21,16 @@ export function GET() {
   }
   lines.push(
     "",
+    "## Guides",
+    "",
+    `- [Cash vs IC Card in Japan 2026](${base}/guides/cash-vs-ic-card-in-japan-2026): Where IC cards (Suica, Pasmo, ICOCA) work in Japan, where cash is still required, and how much yen to bring for a typical trip.`,
+    `- [Onsen and Sento With Tattoos](${base}/guides/onsen-sento-tattoo-etiquette-japan): Whether tattoos are allowed at Japanese onsen and sento, how to find a tattoo-friendly bath, cover-up stickers, and basic bathing etiquette.`,
+    `- [Health Insurance vs Travel Insurance in Japan](${base}/guides/health-insurance-vs-travel-insurance-japan): The difference between a Japanese hoken-sho and foreign travel insurance at a clinic: who pays what, when, and what paperwork each system needs.`,
+    "",
     "## More",
     "",
     `- [About](${base}/about): who runs MORISTACK and how requests are handled`,
-    `- [Guides](${base}/guides): featured how-to guides from both services`,
+    `- [All guides](${base}/guides)`,
     `- [Contact](${base}/contact)`
   );
 
