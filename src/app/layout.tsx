@@ -110,6 +110,11 @@ export const metadata: Metadata = {
   other: {
     "og:locale:alternate": "ja_JP",
   },
+  verification: {
+    other: {
+      "msvalidate.01": "BCC156BAC78B787D4ABF75C14EAF6B6B",
+    },
+  },
   openGraph: {
     siteName: "MORISTACK",
     title: "MORISTACK — Operations for the practical side of Japan",
