@@ -95,6 +95,14 @@ export function Footer() {
               </li>
               <li>
                 <a
+                  href="/guides"
+                  className="text-fg-soft no-underline transition hover:text-fg"
+                >
+                  Guides
+                </a>
+              </li>
+              <li>
+                <a
                   href={`mailto:${c.contactEmail}`}
                   className="text-fg-soft no-underline transition hover:text-fg"
                 >

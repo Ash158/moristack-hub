@@ -18,7 +18,7 @@ export function TopNav() {
           <a href="#about" className="transition hover:text-fg">
             {c.nav.about}
           </a>
-          <a href="#guides" className="transition hover:text-fg">
+          <a href="/guides" className="transition hover:text-fg">
             {c.nav.guides}
           </a>
         </nav>

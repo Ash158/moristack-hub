@@ -185,9 +185,9 @@ export const content: PageContent = {
     ],
   },
   guides: {
-    eyebrow: "PRACTICAL GUIDES",
-    title: "Worth knowing before you request.",
-    body: "Each service keeps a small library of practical guides for situations that come up in Japan.",
+    eyebrow: "FROM CALL & PLAN",
+    title: "More guides, from the services themselves.",
+    body: "Each service keeps a small library of guides for situations that come up in Japan.",
     callGuides: [
       {
         badge: "CALL",

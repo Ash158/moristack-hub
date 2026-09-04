@@ -1,25 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-const GUIDES = [
-  {
-    slug: "how-moristack-handles-your-request",
-    title: "How MORISTACK handles your request",
-    excerpt:
-      "What happens between sending a request and the work starting — step by step.",
-  },
-  {
-    slug: "call-vs-plan",
-    title: "CALL vs PLAN — which one fits your request",
-    excerpt:
-      "Different services, different jobs. A short guide to picking the right one before you send the form.",
-  },
-  {
-    slug: "what-reviewed-up-front-means",
-    title: "What 'reviewed up front' actually means",
-    excerpt:
-      "A working principle, broken down into what it does in practice.",
-  },
+const PRACTICAL_GUIDES = [
   {
     slug: "cash-vs-ic-card-in-japan-2026",
     title: "Cash vs IC Card in Japan 2026: When You Still Need Yen",
@@ -40,45 +22,77 @@ const GUIDES = [
   },
 ];
 
+const COMPANY_NOTES = [
+  {
+    slug: "how-moristack-handles-your-request",
+    title: "How MORISTACK handles your request",
+    excerpt:
+      "What happens between sending a request and the work starting — step by step.",
+  },
+  {
+    slug: "call-vs-plan",
+    title: "CALL vs PLAN — which one fits your request",
+    excerpt:
+      "Different services, different jobs. A short guide to picking the right one before you send the form.",
+  },
+  {
+    slug: "what-reviewed-up-front-means",
+    title: "What 'reviewed up front' actually means",
+    excerpt:
+      "A working principle, broken down into what it does in practice.",
+  },
+];
+
 export const metadata: Metadata = {
-  title: "Notes from MORISTACK",
+  title: "Guides",
   description:
-    "Short, practical notes from MORISTACK on how requests are handled and how CALL and PLAN differ.",
+    "Practical guides to Japan — onsen tattoo policy, health insurance vs travel insurance, cash vs IC card — plus short notes on how MORISTACK works.",
   alternates: { canonical: "/guides" },
 };
+
+function GuideList({ items }: { items: typeof PRACTICAL_GUIDES }) {
+  return (
+    <ul className="mt-8 grid gap-4">
+      {items.map((g) => (
+        <li key={g.slug}>
+          <Link
+            href={`/guides/${g.slug}`}
+            className="group flex flex-col rounded-[16px] border border-border bg-card p-6 no-underline transition hover:-translate-y-0.5 hover:border-accent-soft-line"
+          >
+            <span className="text-base font-extrabold text-fg group-hover:text-accent">
+              {g.title}
+            </span>
+            <span className="mt-2 text-sm leading-relaxed text-fg-soft">
+              {g.excerpt}
+            </span>
+            <span className="mt-4 inline-flex items-center gap-1 text-sm font-bold text-accent">
+              Read guide <span aria-hidden="true">→</span>
+            </span>
+          </Link>
+        </li>
+      ))}
+    </ul>
+  );
+}
 
 export default function GuidesIndex() {
   return (
     <>
       <section className="px-6 py-20 sm:py-24">
         <div className="mx-auto max-w-3xl">
-          <p className="eyebrow text-accent">NOTES</p>
+          <p className="eyebrow text-accent">GUIDES</p>
           <h1 className="display-title mt-4 text-[36px] font-extrabold text-fg sm:text-[44px]">
-            Notes from MORISTACK.
+            Japan, explained in plain terms.
           </h1>
           <p className="mt-5 text-[17px] leading-relaxed text-fg-soft">
-            Practical notes on how we work, what to expect when you send a request, and how CALL and PLAN differ. Each one is short.
+            Practical write-ups on the parts of Japan that trip people up — for visitors and residents alike. Plus a few short notes on how MORISTACK itself works.
           </p>
-          <ul className="mt-10 grid gap-4">
-            {GUIDES.map((g) => (
-              <li key={g.slug}>
-                <Link
-                  href={`/guides/${g.slug}`}
-                  className="group flex flex-col rounded-[16px] border border-border bg-card p-6 no-underline transition hover:-translate-y-0.5 hover:border-accent-soft-line"
-                >
-                  <span className="text-base font-extrabold text-fg group-hover:text-accent">
-                    {g.title}
-                  </span>
-                  <span className="mt-2 text-sm leading-relaxed text-fg-soft">
-                    {g.excerpt}
-                  </span>
-                  <span className="mt-4 inline-flex items-center gap-1 text-sm font-bold text-accent">
-                    Read note <span aria-hidden="true">→</span>
-                  </span>
-                </Link>
-              </li>
-            ))}
-          </ul>
+
+          <h2 className="mt-14 text-2xl font-extrabold text-fg">Practical guides</h2>
+          <GuideList items={PRACTICAL_GUIDES} />
+
+          <h2 className="mt-16 text-2xl font-extrabold text-fg">Notes on how we work</h2>
+          <GuideList items={COMPANY_NOTES} />
         </div>
       </section>
     </>
