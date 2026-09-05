@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Cash vs IC Card in Japan 2026: When You Still Need Yen",
   description:
-    "Where IC cards (Suica, Pasmo, ICOCA) work in Japan, where cash is still required (ryokan, small shops, some restaurants), and how much yen to bring for a typical trip.",
+    "Where IC cards (Suica, Pasmo, ICOCA) work in Japan, where cash is still required (ryokan, small shops), and how much yen to bring.",
   alternates: { canonical: "/guides/cash-vs-ic-card-in-japan-2026" },
 };
 

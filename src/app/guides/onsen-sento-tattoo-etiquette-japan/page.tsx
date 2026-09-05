@@ -12,7 +12,7 @@ const HERO_IMAGE = {
 export const metadata: Metadata = {
   title: "Onsen and Sento With Tattoos: What's Actually Allowed in Japan",
   description:
-    "Whether tattoos are allowed at Japanese onsen and sento in 2026, how to find a tattoo-friendly bath, cover-up stickers that work, and the basic bathing etiquette every visitor should know.",
+    "Whether tattoos are allowed at Japanese onsen and sento in 2026, how to find a tattoo-friendly bath, cover-up stickers, and basic bathing etiquette.",
   alternates: { canonical: "/guides/onsen-sento-tattoo-etiquette-japan" },
   openGraph: {
     type: "article",

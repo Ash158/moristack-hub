@@ -117,6 +117,12 @@ export function Footer() {
         <div className="mt-10 flex flex-col items-start justify-between gap-3 border-t border-border-soft pt-6 text-xs text-fg-soft sm:flex-row sm:items-center">
           <p>© {year} MORISTACK</p>
           <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
+            <a href="/about" className="text-fg-soft no-underline transition hover:text-fg">
+              About
+            </a>
+            <a href="/contact" className="text-fg-soft no-underline transition hover:text-fg">
+              Contact
+            </a>
             <a href="/privacy" className="text-fg-soft no-underline transition hover:text-fg">
               Privacy
             </a>
