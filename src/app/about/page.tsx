@@ -9,7 +9,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const c = content;
   return {
     title: c.about.title,
-    description: c.about.body,
+    description: "MORISTACK helps with Japan reservations, confirmations, questions and trip planning, reviewing requests and clarifying details before work begins.",
     alternates: {
       canonical: "/about",
     },

@@ -13,13 +13,13 @@ export async function generateMetadata(): Promise<Metadata> {
   const c = content;
   return {
     title: c.hero.headline,
-    description: c.hero.subhead,
+    description: "MORISTACK helps move Japan tasks forward from abroad. Choose a service; a person reviews your request before work begins.",
     alternates: {
       canonical: "/",
     },
     openGraph: {
       title: c.hero.headline,
-      description: c.hero.subhead,
+      description: "MORISTACK helps move Japan tasks forward from abroad. Choose a service; a person reviews your request before work begins.",
       url: "https://moristack.com",
       locale: "en_US",
       type: "website",

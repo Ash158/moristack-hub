@@ -52,3 +52,5 @@
 ## 2026-09-05 — SEOタイトル追加修正
 
 SEOタイトルを本文見出しと分離して長さ超過を解消。全公開記事の実HTMLでtitle <=60、description <=155、og:image存在・画像HTTP 200、JSON-LDパース、内部リンク到達を確認。build・lint成功。3サイト統合の測定表はMORISTACKマーケティング/docs/2026-09-05-task4-completion-report.md。公開反映はPR確認後に実施。
+
+追加: sitemap全ページの再計測で判明した記事以外のdescription超過も、metadata専用の説明文で修正。再build・lintおよび実HTMLの取得で確認済み。
