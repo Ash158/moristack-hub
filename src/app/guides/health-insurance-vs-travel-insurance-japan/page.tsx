@@ -10,7 +10,7 @@ const HERO_IMAGE = {
 };
 
 export const metadata: Metadata = {
-  title: "Japanese Health Insurance vs Travel Insurance: How a Clinic Visit Actually Works",
+  title: { absolute: "Japan Health vs Travel Insurance: Clinic Visits" },
   description:
     "Japanese hoken-sho (health insurance) vs foreign travel insurance at a clinic: who pays what, when, and what paperwork each system needs.",
   alternates: { canonical: "/guides/health-insurance-vs-travel-insurance-japan" },
