@@ -12,10 +12,10 @@ export function TopNav() {
           aria-label="Main"
           className="order-3 flex w-full items-center gap-5 text-sm font-semibold text-fg-soft sm:order-2 sm:w-auto sm:gap-7"
         >
-          <a href="#services" className="transition hover:text-fg">
+          <a href="/services" className="transition hover:text-fg">
             {c.nav.services}
           </a>
-          <a href="#about" className="transition hover:text-fg">
+          <a href="/about" className="transition hover:text-fg">
             {c.nav.about}
           </a>
           <a href="/guides" className="transition hover:text-fg">
